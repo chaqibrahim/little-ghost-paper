@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://ba214jfkd1jhh"]
 
 [ext_resource type="Script" uid="uid://b0kyxivdsb26q" path="res://Scripts/Others/globals.gd" id="1_nnkp2"]
+[ext_resource type="PackedScene" uid="uid://7i7a3qmpmu8q" path="res://Scenes/Menus/disclaimer.tscn" id="2_jyc0d"]
+[ext_resource type="PackedScene" uid="uid://cgmpf3f1qetqt" path="res://Scenes/Menus/main_menu.tscn" id="3_0e3jl"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
+menu_disclaimer = ExtResource("2_jyc0d")
+menu_mainmenu = ExtResource("3_0e3jl")

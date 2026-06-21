@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://7i7a3qmpmu8q"]
+
+[ext_resource type="Script" uid="uid://ckc2ft0spqi0s" path="res://Scripts/Menus/disclaimer.gd" id="1_2gvgh"]
+[ext_resource type="Theme" uid="uid://33upoeiv1r5u" path="res://Resources/Themes/theme_dialogue.tres" id="1_p6gnq"]
+
+[node name="Disclaimer" type="Control" unique_id=796670022]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2gvgh")
+
+[node name="Label" type="Label" parent="." unique_id=2109032357]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_p6gnq")
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 20
+text = "SEDIKIT PESAN UNTUK TESTER
+
+Sebenarnya, saya kurang paham dengan Unity karena saya biasanya menggunakan Godot Engine.
+Dalam 14 hari ini saya belajar menggunakan Unity dari nol dan masih banyak yang belum paham. Karena waktu yang terbatas, jadinya saya membuat project ini dengan Godot.
+Saya paham kalau ini akan membuat saya tereliminasi dari recruitment ini karena tidak mengikuti instruksi yang eksplisit.
+Tapi saya tetap mengirimkan project ini barangkali dapat menghibur tim rekan2 dari Toge Productions. I hope you guys like it ;)
+
+[Press space to continue]"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0

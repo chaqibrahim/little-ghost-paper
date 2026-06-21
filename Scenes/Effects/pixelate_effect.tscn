@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbk6dw01rb2id"]
+
+[ext_resource type="Shader" uid="uid://b8h1g5f4ufjqw" path="res://Resources/Shaders/pixelate_effect.gdshader" id="1_meok5"]
+[ext_resource type="Script" uid="uid://de21xah1dxd3q" path="res://Scripts/Effects/pixelate_effect.gd" id="2_uxocg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bxk1h"]
+shader = ExtResource("1_meok5")
+shader_parameter/pixel_size = 1.0
+
+[node name="PixelateEffect" type="ColorRect" unique_id=289947587]
+material = SubResource("ShaderMaterial_bxk1h")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_uxocg")
