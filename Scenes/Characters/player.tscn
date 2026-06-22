@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1qnvbw4femld"]
+
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_3etf2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(16, 16)
+
+[node name="Player" type="RigidBody2D" unique_id=829174031]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1952097139]
+scale = Vector2(2, 2)
+texture = ExtResource("1_3etf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978996315]
+shape = SubResource("RectangleShape2D_3xd07")
