@@ -3,11 +3,12 @@
 importer="aseprite.spritesheet.importer"
 type="PortableCompressedTexture2D"
 uid="uid://cf4kftxjvjobd"
-valid=false
+path="res://.godot/imported/hat.aseprite-100c8da0438d24022c774de0cba916b8.res"
 
 [deps]
 
 source_file="res://Images/Characters/hat.aseprite"
+dest_files=["res://.godot/imported/hat.aseprite-100c8da0438d24022c774de0cba916b8.res"]
 
 [params]
 

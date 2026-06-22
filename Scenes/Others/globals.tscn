@@ -7,7 +7,10 @@
 [ext_resource type="Script" uid="uid://bp7uujuhvv8f3" path="res://Scripts/Globals/layer.gd" id="5_i6vhm"]
 [ext_resource type="PackedScene" uid="uid://d16hptpsn1bbt" path="res://Scenes/Stages/stage_1.tscn" id="5_vmcjh"]
 [ext_resource type="Script" uid="uid://cucp3j5b18lni" path="res://Scripts/Globals/menu.gd" id="6_f6rvj"]
+[ext_resource type="PackedScene" uid="uid://1qnvbw4femld" path="res://Scenes/Characters/player.tscn" id="6_x0rfn"]
 [ext_resource type="Script" uid="uid://dow3aoxwp87om" path="res://Scripts/Globals/effect.gd" id="7_0s48f"]
+[ext_resource type="PackedScene" uid="uid://ccs21dfhdu3y5" path="res://Scenes/Characters/tutorial_guy.tscn" id="7_5kxlb"]
+[ext_resource type="PackedScene" uid="uid://r3it2pmodlut" path="res://Scenes/Effects/warp_effect.tscn" id="8_5kxlb"]
 [ext_resource type="Script" uid="uid://cm1wa05ss8i1l" path="res://Scripts/Globals/game.gd" id="8_bxiyh"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
@@ -18,6 +21,9 @@ script = ExtResource("4_0e3jl")
 disclaimer_scene = ExtResource("2_jyc0d")
 mainmenu_scene = ExtResource("3_0e3jl")
 stage1_scene = ExtResource("5_vmcjh")
+player_scene = ExtResource("6_x0rfn")
+tutorial_guy_scene = ExtResource("7_5kxlb")
+warp_effect = ExtResource("8_5kxlb")
 
 [node name="Layer" type="Node2D" parent="." unique_id=1850359786]
 script = ExtResource("5_i6vhm")
