@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://r3it2pmodlut"]
+
+[ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="1_rkvaa"]
+[ext_resource type="Texture2D" uid="uid://cxbl3n46yvcu0" path="res://Resources/Graph/1 to 0.tres" id="2_xo7c7"]
+[ext_resource type="Script" uid="uid://dc4jkwllbk41e" path="res://Scripts/Effects/one_shot_effect.gd" id="3_xo7c7"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ek0so"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+damping_min = 20.0
+damping_max = 20.0
+scale_min = 4.0
+scale_max = 4.0
+scale_curve = ExtResource("2_xo7c7")
+
+[node name="WarpEffect" type="GPUParticles2D" unique_id=1975978312]
+emitting = false
+amount = 10
+texture = ExtResource("1_rkvaa")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ek0so")
+script = ExtResource("3_xo7c7")
