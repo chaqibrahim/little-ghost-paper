@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://fcu5ejij8eyf"]
+
+[ext_resource type="Texture2D" uid="uid://bhc04no2cnk17" path="res://Images/Tiles/floor.aseprite" id="1_yc36u"]
+
+[node name="TileFloor" type="Node2D" unique_id=1506546701]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1298892941]
+scale = Vector2(2, 2)
+texture = ExtResource("1_yc36u")
