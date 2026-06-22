@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cgx5s8sl4q4k7"]
 
 [ext_resource type="Script" uid="uid://d3abcv1fub7vo" path="res://Scripts/Others/main.gd" id="1_mlyjl"]
+[ext_resource type="PackedScene" uid="uid://c51n2taoovj58" path="res://Scenes/Effects/background_particles.tscn" id="2_ft4l2"]
 [ext_resource type="PackedScene" uid="uid://cbk6dw01rb2id" path="res://Scenes/Effects/pixelate_effect.tscn" id="2_gkop6"]
+[ext_resource type="PackedScene" uid="uid://bkuof6vsgevig" path="res://Scenes/Effects/fade_effect.tscn" id="3_ext17"]
 
 [node name="Main" type="Control" unique_id=932928571]
 layout_mode = 3
@@ -22,14 +24,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="BackgroundLayer" unique_id=1797717298]
+[node name="Background" type="ColorRect" parent="BackgroundLayer" unique_id=1797717298]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.25, 0.25, 0.25, 1)
+color = Color(0.75, 0.75, 0.75, 1)
+
+[node name="BackgroundParticles" parent="BackgroundLayer" unique_id=1523793957 instance=ExtResource("2_ft4l2")]
+
+[node name="BackgroundParticles2" parent="BackgroundLayer" unique_id=21643857 instance=ExtResource("2_ft4l2")]
+position = Vector2(320, 90)
+rotation = 3.1415927
+
+[node name="StageLayer" type="Control" parent="." unique_id=1898833649]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MenuLayer" type="Control" parent="." unique_id=545865284]
 layout_mode = 1
@@ -48,4 +64,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PixelateEffect" parent="ScreenLayer" unique_id=289947587 instance=ExtResource("2_gkop6")]
+visible = false
+layout_mode = 1
+
+[node name="FadeEffect" parent="ScreenLayer" unique_id=632025283 instance=ExtResource("3_ext17")]
+visible = false
 layout_mode = 1

@@ -20,14 +20,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_p6gnq")
+theme_override_colors/font_outline_color = Color(0.25, 0.25, 0.25, 1)
 theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 10
 text = "SEDIKIT PESAN UNTUK TESTER
 
 Sebenarnya, saya kurang paham dengan Unity karena saya biasanya menggunakan Godot Engine.
 Dalam 14 hari ini saya belajar menggunakan Unity dari nol dan masih banyak yang belum paham. Karena waktu yang terbatas, jadinya saya membuat project ini dengan Godot.
 Saya paham kalau ini akan membuat saya tereliminasi dari recruitment ini karena tidak mengikuti instruksi yang eksplisit.
-Tapi saya tetap mengirimkan project ini barangkali dapat menghibur tim rekan2 dari Toge Productions. I hope you guys like it ;)
+Tapi saya tetap mengirimkan project ini barangkali dapat menghibur tim rekan2 dari Toge Productions.
+Project ini tetap mengikuti syarat lainnya.
+I hope you guys like it ;)
 
 [Press space to continue]"
 horizontal_alignment = 1

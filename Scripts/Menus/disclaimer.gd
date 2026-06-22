@@ -8,6 +8,7 @@ var tween: Tween
 
 
 func _ready() -> void:
+	Globals.effect.fade_effect.unfade()
 	tween = create_tween()
 	tween.tween_property(disclaimer, "visible_ratio", 1.0, 10.0)
 	await tween.finished
