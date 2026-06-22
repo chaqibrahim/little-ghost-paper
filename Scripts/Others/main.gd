@@ -2,9 +2,9 @@
 extends Control
 
 func _ready() -> void:
-	Globals.background_layer = $BackgroundLayer
-	Globals.menu_layer = $MenuLayer
-	Globals.screen_layer = $ScreenLayer
+	Globals.layer.background_layer = $BackgroundLayer
+	Globals.layer.menu_layer = $MenuLayer
+	Globals.layer.screen_layer = $ScreenLayer
 	
 	await get_tree().create_timer(1.0).timeout
-	Globals.show_menu(Globals.MenuList.DISCLAIMER)
+	Globals.menu.show_menu(Menu.MenuList.DISCLAIMER)

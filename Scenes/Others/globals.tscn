@@ -1,10 +1,26 @@
 [gd_scene format=3 uid="uid://ba214jfkd1jhh"]
 
-[ext_resource type="Script" uid="uid://b0kyxivdsb26q" path="res://Scripts/Others/globals.gd" id="1_nnkp2"]
+[ext_resource type="Script" uid="uid://b0kyxivdsb26q" path="res://Scripts/Globals/globals.gd" id="1_nnkp2"]
 [ext_resource type="PackedScene" uid="uid://7i7a3qmpmu8q" path="res://Scenes/Menus/disclaimer.tscn" id="2_jyc0d"]
 [ext_resource type="PackedScene" uid="uid://cgmpf3f1qetqt" path="res://Scenes/Menus/main_menu.tscn" id="3_0e3jl"]
+[ext_resource type="Script" uid="uid://brs1uu78nmaqn" path="res://Scripts/Globals/reference.gd" id="4_0e3jl"]
+[ext_resource type="Script" uid="uid://bp7uujuhvv8f3" path="res://Scripts/Globals/layer.gd" id="5_i6vhm"]
+[ext_resource type="Script" uid="uid://cucp3j5b18lni" path="res://Scripts/Globals/menu.gd" id="6_f6rvj"]
+[ext_resource type="Script" uid="uid://dow3aoxwp87om" path="res://Scripts/Globals/effect.gd" id="7_0s48f"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
-menu_disclaimer = ExtResource("2_jyc0d")
-menu_mainmenu = ExtResource("3_0e3jl")
+
+[node name="Reference" type="Node2D" parent="." unique_id=1748062810]
+script = ExtResource("4_0e3jl")
+disclaimer_scene = ExtResource("2_jyc0d")
+mainmenu_scene = ExtResource("3_0e3jl")
+
+[node name="Layer" type="Node2D" parent="." unique_id=1850359786]
+script = ExtResource("5_i6vhm")
+
+[node name="Menu" type="Node2D" parent="." unique_id=593011014]
+script = ExtResource("6_f6rvj")
+
+[node name="Effect" type="Node2D" parent="." unique_id=441294154]
+script = ExtResource("7_0s48f")

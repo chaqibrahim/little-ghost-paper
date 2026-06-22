@@ -6,7 +6,6 @@ var can_continue := false
 @onready var disclaimer := $Label
 
 func _ready() -> void:
-	#buat animasi ngetik
 	var tween := create_tween()
 	tween.tween_property(disclaimer, "visible_ratio", 1.0, 10.0)
 	await tween.finished
@@ -16,4 +15,4 @@ func _input(event: InputEvent) -> void:
 	if not can_continue:
 		return
 	if event.is_action_pressed("ui_accept"):
-		Globals.show_menu(Globals.MenuList.MAIN_MENU)
+		Globals.menu.show_menu(Menu.MenuList.MAIN_MENU)

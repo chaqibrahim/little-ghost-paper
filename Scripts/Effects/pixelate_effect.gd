@@ -3,7 +3,7 @@ extends ColorRect
 class_name Pixelate
 
 func _ready() -> void:
-	Globals.pixelate_effect = self
+	Globals.effect.pixelate_effect = self
 
 func pixelate() -> void:
 	var tween := create_tween()
