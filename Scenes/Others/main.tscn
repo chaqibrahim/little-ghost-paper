@@ -11,6 +11,7 @@ tonemap_mode = 2
 glow_enabled = true
 glow_intensity = 0.25
 glow_bloom = 0.5
+glow_hdr_threshold = 0.5
 
 [node name="Main" type="Control" unique_id=932928571]
 layout_mode = 3

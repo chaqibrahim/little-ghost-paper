@@ -27,8 +27,8 @@ func show_stage(stage: StageList) -> void:
 		return
 
 	var new_stage: Node2D = stage_list[stage].instantiate()
-	Globals.effect.fade_effect.fade()
+	Globals.effect.pixelate_effect.pixelate()
 	await get_tree().create_timer(0.5).timeout
 	Globals.layer.clear_layer(Layer.LayerList.STAGE)
 	Globals.layer.stage_layer.add_child(new_stage)
-	Globals.effect.fade_effect.unfade()
+	Globals.effect.pixelate_effect.unpixelate()
