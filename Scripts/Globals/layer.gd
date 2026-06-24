@@ -5,6 +5,9 @@ extends Node2D
 enum LayerList {
 	BACKGROUND,
 	STAGE,
+	BACK,
+	CHARACTER,
+	FRONT,
 	MENU,
 	SCREEN,
 }
@@ -12,6 +15,9 @@ enum LayerList {
 var layer_list := { }
 var background_layer: Control
 var stage_layer: Control
+var back_layer: Control
+var character_layer: Control
+var front_layer: Control
 var menu_layer: Control
 var screen_layer: Control
 
@@ -26,6 +32,9 @@ func setup_dictionaries() -> void:
 	layer_list = {
 		LayerList.BACKGROUND: background_layer,
 		LayerList.STAGE: stage_layer,
+		LayerList.BACK: back_layer,
+		LayerList.CHARACTER: character_layer,
+		LayerList.FRONT: front_layer,
 		LayerList.MENU: menu_layer,
 		LayerList.SCREEN: screen_layer,
 	}

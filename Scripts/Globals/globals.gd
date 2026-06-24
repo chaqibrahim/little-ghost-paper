@@ -7,6 +7,7 @@ extends Node2D
 @onready var menu: Menu = $Menu
 @onready var effect: Effect = $Effect
 @onready var game: Game = $Game
+@onready var spawn: Spawn = $Spawn
 
 
 func _ready() -> void:

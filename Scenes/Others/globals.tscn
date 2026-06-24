@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ccs21dfhdu3y5" path="res://Scenes/Characters/tutorial_guy.tscn" id="7_5kxlb"]
 [ext_resource type="PackedScene" uid="uid://r3it2pmodlut" path="res://Scenes/Effects/warp_effect.tscn" id="8_5kxlb"]
 [ext_resource type="Script" uid="uid://cm1wa05ss8i1l" path="res://Scripts/Globals/game.gd" id="8_bxiyh"]
+[ext_resource type="Script" uid="uid://dwi73504k3b7u" path="res://Scripts/Globals/spawn.gd" id="13_iow56"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
@@ -36,3 +37,6 @@ script = ExtResource("7_0s48f")
 
 [node name="Game" type="Node2D" parent="." unique_id=276489128]
 script = ExtResource("8_bxiyh")
+
+[node name="Spawn" type="Node2D" parent="." unique_id=289186880]
+script = ExtResource("13_iow56")
