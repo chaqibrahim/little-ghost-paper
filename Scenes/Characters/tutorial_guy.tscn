@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(16, 16)
 
-[node name="TutorialGuy" type="RigidBody2D" unique_id=829174031]
+[node name="TutorialGuy" type="RigidBody2D" unique_id=829174031 groups=["tutorial_guy"]]
 
 [node name="Hat" type="Sprite2D" parent="." unique_id=815938881]
 position = Vector2(0, -16)
@@ -16,6 +16,7 @@ texture = ExtResource("1_6nydb")
 [node name="Body" type="Sprite2D" parent="." unique_id=1952097139]
 scale = Vector2(2, 2)
 texture = ExtResource("1_6qkn1")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978996315]
 shape = SubResource("RectangleShape2D_3xd07")

@@ -8,6 +8,7 @@ extends Node2D
 @onready var effect: Effect = $Effect
 @onready var game: Game = $Game
 @onready var spawn: Spawn = $Spawn
+@onready var signalbus: SignalBus = $Signal
 
 
 func _ready() -> void:

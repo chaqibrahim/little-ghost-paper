@@ -47,3 +47,11 @@ func show_effect(effect: EffectList, layer: EffectLayer, pos: Vector2, rot: floa
 	new_effect.global_position = pos
 	new_effect.global_rotation = rot
 	new_effect_layer.add_child(new_effect)
+
+
+func chat_animation_effect(chatter: Node2D) -> void:
+	var tween := create_tween()
+	var initial_position := chatter.global_position
+	var adjusted_position := chatter.global_position + Vector2(0.0, 8.0)
+	tween.tween_property(chatter, "global_position", adjusted_position, 0.125)
+	tween.tween_property(chatter, "global_position", initial_position, 0.125)

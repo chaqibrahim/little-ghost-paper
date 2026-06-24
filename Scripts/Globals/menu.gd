@@ -44,7 +44,7 @@ func control_added(control: Control) -> void:
 
 	#kasih animasi tiap menu select/unselect
 	control.focus_entered.connect(control_focus_entered.bind(control))
-	control.focus_exited.connect(control_focus_exited.bind(control))
+	#control.focus_exited.connect(control_focus_exited.bind(control))
 
 
 func button_added(button: Button) -> void:
@@ -55,7 +55,7 @@ func button_added(button: Button) -> void:
 func control_focus_entered(control: Control) -> void:
 	var tween := create_tween()
 	tween.tween_property(control, "offset_transform_scale", Vector2(1.5, 1.5), 0.125)
-	tween.tween_property(control, "offset_transform_scale", Vector2(1.25, 1.25), 0.125)
+	tween.tween_property(control, "offset_transform_scale", Vector2.ONE, 0.125)
 
 
 func control_focus_exited(control: Control) -> void:
