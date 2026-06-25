@@ -8,6 +8,7 @@ enum StageList {
 }
 
 var stage_list := { }
+var controllable := false
 
 
 func _ready() -> void:

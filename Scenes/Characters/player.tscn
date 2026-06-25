@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="1_gy20a"]
 [ext_resource type="PackedScene" uid="uid://dpx233vm6463t" path="res://Scenes/Components/dialogue_animator.tscn" id="2_40svl"]
 [ext_resource type="Texture2D" uid="uid://cxbl3n46yvcu0" path="res://Resources/Graph/1 to 0.tres" id="2_cqrjx"]
+[ext_resource type="PackedScene" uid="uid://b01gtltcm1htg" path="res://Scenes/Components/character_controller.tscn" id="5_cqrjx"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3xd07"]
 particle_flag_disable_z = true
@@ -28,3 +29,5 @@ texture = ExtResource("1_3etf2")
 shape = SubResource("RectangleShape2D_3xd07")
 
 [node name="DialogueAnimator" parent="." unique_id=1595439108 instance=ExtResource("2_40svl")]
+
+[node name="CharacterController" parent="." unique_id=531670948 instance=ExtResource("5_cqrjx")]

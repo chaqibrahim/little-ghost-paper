@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b01gtltcm1htg"]
+
+[ext_resource type="Script" uid="uid://k24i7lgf4d2p" path="res://Scripts/Components/character_controller.gd" id="1_wsu20"]
+
+[node name="CharacterController" type="Node" unique_id=531670948]
+script = ExtResource("1_wsu20")
