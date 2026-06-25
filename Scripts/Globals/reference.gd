@@ -7,6 +7,7 @@ extends Node2D
 @export var mainmenu_scene: PackedScene
 @export_group("Stage Scenes")
 @export var stage1_scene: PackedScene
+@export var stage2_scene: PackedScene
 @export_group("Character Scenes")
 @export var player_scene: PackedScene
 @export var tutorial_guy_scene: PackedScene

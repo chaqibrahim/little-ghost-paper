@@ -1,12 +1,24 @@
 [gd_scene format=3 uid="uid://1qnvbw4femld"]
 
 [ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_3etf2"]
+[ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="1_gy20a"]
 [ext_resource type="PackedScene" uid="uid://dpx233vm6463t" path="res://Scenes/Components/dialogue_animator.tscn" id="2_40svl"]
+[ext_resource type="Texture2D" uid="uid://cxbl3n46yvcu0" path="res://Resources/Graph/1 to 0.tres" id="2_cqrjx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3xd07"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = ExtResource("2_cqrjx")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(16, 16)
 
 [node name="Player" type="RigidBody2D" unique_id=829174031 groups=["player"]]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=597036454]
+texture = ExtResource("1_gy20a")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_3xd07")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1952097139]
 scale = Vector2(2, 2)

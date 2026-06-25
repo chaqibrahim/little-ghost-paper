@@ -40,3 +40,5 @@ func move_out() -> void:
 	tween.set_parallel(true)
 	tween.tween_property(tutorial_guy, "global_position", tutorial_spawn.global_position, 1.0)
 	tween.tween_property(player, "global_position", tutorial_spawn.global_position, 1.5)
+	await tween.finished
+	Globals.game.show_stage(Game.StageList.STAGE_2)
