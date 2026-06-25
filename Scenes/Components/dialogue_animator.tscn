@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpx233vm6463t"]
+
+[ext_resource type="Script" uid="uid://rupstg6w0wil" path="res://Scripts/Components/dialogue_animator.gd" id="1_yjeaj"]
+
+[node name="DialogueAnimator" type="Node" unique_id=1595439108]
+script = ExtResource("1_yjeaj")

@@ -1,41 +1,41 @@
 ~ opening
-You: Huh ? Where am I?
-You: Am I a ghost ?
-You: Does that mean that I've died ?
-You: or maybe I'm a paper now somehow, I don't know.
-You: It's not really clear with this sprite, you know?
+You: [$> Globals.signalbus.player_talked.emit()] Huh ? Where am I?
+You: [$> Globals.signalbus.player_talked.emit()] Am I a ghost ?
+You: [$> Globals.signalbus.player_talked.emit()] Does that mean that I've died ?
+You: [$> Globals.signalbus.player_talked.emit()] or maybe I'm a paper now somehow, I don't know.
+You: [$> Globals.signalbus.player_talked.emit()] It's not really clear with this sprite, you know?
 Unknown: Hey, you!
 $> Globals.signalbus.dialogue1_finished.emit()
 => END
 
 ~ tutorial_coming
-Unknown: Are you [wait=1] lost ?
+Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()] Are you [wait=1] lost ?
 - Yes
-	Unknown: That explains why you're out here
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]That explains why you're out here
 - No
-	Unknown: Don't lie to me
-	Unknown: I've read your speech bubble
-Unknown: Have you met anyone here before ?
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Don't lie to me
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]I've read your speech bubble
+Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Have you met anyone here before ?
 - Yes
-	Unknown: Who ?
-	You: Your mom! Ooooowwwwwwwwwww
-	Unknown: So... you've met a factory?
-	You: It's a joke...
-	Unknown: I don't get it
-	You: Wait, does that mean that we're papers?
-	Unknown: Umm, yeah?
-	You: Ohh...
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Who ?
+	You: [$> Globals.signalbus.player_talked.emit()]Your mom! Ooooowwwwwwwwwww
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]So... you've met a factory?
+	You: [$> Globals.signalbus.player_talked.emit()]It's a joke...
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]I don't get it
+	You: [$> Globals.signalbus.player_talked.emit()]Wait, does that mean that we're papers?
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Umm, yeah?
+	You: [$> Globals.signalbus.player_talked.emit()]Ohh...
 - No
-	Unknown: Well then,
-Unknown: Since I'm the first person that you've met
-Unknown: I guess I am the Tutorial Guy
-You: Sure
-Tutorial Guy: I'll teach you the basics of this game
-Tutorial Guy: I would teach you about movement now,
-Tutorial Guy: but there isn't much space here
-Tutorial Guy: Let's find somewhere else with more space
-You: Let's go!
-Tutorial Guy: Also to show that you can move on your own in a cutscene
-You: Right, I do need to do that
+	Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Well then,
+Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]Since I'm the first person that you've met
+Unknown: [$> Globals.signalbus.tutorial_guy_talked.emit()]I guess I am the Tutorial Guy
+You: [$> Globals.signalbus.player_talked.emit()]Sure
+Tutorial Guy: [$> Globals.signalbus.tutorial_guy_talked.emit()]I'll teach you the basics of this game
+Tutorial Guy: [$> Globals.signalbus.tutorial_guy_talked.emit()]I would teach you about movement now,
+Tutorial Guy: [$> Globals.signalbus.tutorial_guy_talked.emit()]but there isn't much space here
+Tutorial Guy: [$> Globals.signalbus.tutorial_guy_talked.emit()]Let's find somewhere else with more space
+You: [$> Globals.signalbus.player_talked.emit()]Let's go!
+Tutorial Guy: [$> Globals.signalbus.tutorial_guy_talked.emit()]Also to show that you can move on your own in a cutscene
+You: [$> Globals.signalbus.player_talked.emit()]Right, I do need to do that
 $> Globals.signalbus.dialogue2_finished.emit()
 => END
