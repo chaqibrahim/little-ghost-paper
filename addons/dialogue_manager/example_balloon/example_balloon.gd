@@ -1,42 +1,28 @@
-class_name DialogueManagerExampleBalloon extends CanvasLayer
+class_name DialogueManagerExampleBalloon
+extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
-
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
-
 ## Start from a given title when using balloon as a [Node] in a scene.
 @export var start_from_title: String = ""
-
 ## If running as a [Node] in a scene then auto start the dialogue.
 @export var auto_start: bool = false
-
 ## If all other input is blocked as long as dialogue is shown.
 @export var will_block_other_input: bool = true
-
 ## The action to use for advancing the dialogue
 @export var next_action: StringName = &"ui_accept"
-
 ## The action to use to skip typing the dialogue
 @export var skip_action: StringName = &"ui_cancel"
 
-## A sound player for voice lines (if they exist).
-@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
-
 ## Temporary game states
 var temporary_game_states: Array = []
-
 ## See if we are waiting for the player
 var is_waiting_for_input: bool = false
-
 ## See if we are running a long mutation and should hide the balloon
 var will_hide_balloon: bool = false
-
 ## A dictionary to store any ephemeral variables
-var locals: Dictionary = {}
-
-var _locale: String = TranslationServer.get_locale()
-
+var locals: Dictionary = { }
 ## The current line
 var dialogue_line: DialogueLine:
 	set(value):
@@ -51,22 +37,20 @@ var dialogue_line: DialogueLine:
 				hide()
 	get:
 		return dialogue_line
-
 ## A cooldown timer for delaying the balloon hide when encountering a mutation.
 var mutation_cooldown: Timer = Timer.new()
+var _locale: String = TranslationServer.get_locale()
 
+## A sound player for voice lines (if they exist).
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 ## The base balloon anchor
 @onready var balloon: Control = %Balloon
-
 ## The label showing the name of the currently speaking character
 @onready var character_label: RichTextLabel = %CharacterLabel
-
 ## The label showing the currently spoken dialogue
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
-
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
@@ -173,8 +157,6 @@ func next(next_id: String) -> void:
 
 
 #region Signals
-
-
 func _on_mutation_cooldown_timeout() -> void:
 	if will_hide_balloon:
 		will_hide_balloon = false
@@ -198,8 +180,10 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 			dialogue_label.skip_typing()
 			return
 
-	if not is_waiting_for_input: return
-	if dialogue_line.responses.size() > 0: return
+	if not is_waiting_for_input:
+		return
+	if dialogue_line.responses.size() > 0:
+		return
 
 	# When there are no response options the balloon itself is the clickable thing
 	get_viewport().set_input_as_handled()
@@ -212,6 +196,4 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
-
-
 #endregion

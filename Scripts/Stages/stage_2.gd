@@ -29,3 +29,5 @@ func walk_in() -> void:
 	tween.tween_property(player, "global_position", player_walkpoint.global_position, 2.0)
 	await tween.finished
 	DialogueManager.show_dialogue_balloon(dialogue, "start")
+	var pos_keep: Node = Globals.reference.position_keeper.instantiate()
+	tutorial_guy.add_child(pos_keep)

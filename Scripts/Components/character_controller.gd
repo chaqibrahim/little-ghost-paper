@@ -1,7 +1,7 @@
 #character_controller.gd
 extends Node
 
-const MOVEMENT_SPEED := 100.0
+const MOVEMENT_SPEED := 500.0
 
 @onready var parent: RigidBody2D = get_parent()
 

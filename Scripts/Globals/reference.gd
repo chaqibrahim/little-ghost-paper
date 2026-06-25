@@ -13,6 +13,8 @@ extends Node2D
 @export var tutorial_guy_scene: PackedScene
 @export_group("Effect Scenes")
 @export var warp_effect: PackedScene
+@export_group("Others")
+@export var position_keeper: PackedScene
 
 
 func _ready() -> void:

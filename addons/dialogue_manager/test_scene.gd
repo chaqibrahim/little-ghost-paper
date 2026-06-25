@@ -1,12 +1,15 @@
-class_name BaseDialogueTestScene extends Node2D
-
+class_name BaseDialogueTestScene
+extends Node2D
 
 const DialogueSettings = preload("./settings.gd")
 const DialogueResource = preload("./dialogue_resource.gd")
 
-
 @onready var title: String = DialogueSettings.get_user_value("run_title")
 @onready var resource: DialogueResource = load(DialogueSettings.get_user_value("run_resource_path"))
+
+
+func _enter_tree() -> void:
+	DialogueSettings.set_user_value("is_running_test_scene", false)
 
 
 func _ready():
@@ -23,15 +26,7 @@ func _ready():
 	dialogue_manager.show_dialogue_balloon(resource, title if not title.is_empty() else resource.first_title)
 
 
-func _enter_tree() -> void:
-	DialogueSettings.set_user_value("is_running_test_scene", false)
-
-
 #region Signals
-
-
 func _on_dialogue_ended(_resource: DialogueResource):
 	get_tree().quit()
-
-
 #endregion

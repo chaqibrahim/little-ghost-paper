@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b60kgbsov7joo"]
+
+[ext_resource type="Script" uid="uid://bx4xq4aig4ar5" path="res://Scripts/Components/sprite_normalizer.gd" id="1_em55p"]
+
+[node name="SpriteNormalizer" type="Node" unique_id=1117604572]
+script = ExtResource("1_em55p")

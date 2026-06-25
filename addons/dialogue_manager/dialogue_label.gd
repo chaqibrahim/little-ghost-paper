@@ -1,49 +1,34 @@
-@icon("./assets/icon.svg")
-
 @tool
-
+@icon("./assets/icon.svg")
+class_name DialogueLabel
+extends RichTextLabel
 ## A RichTextLabel specifically for use with [b]Dialogue Manager[/b] dialogue.
-class_name DialogueLabel extends RichTextLabel
-
 
 ## Emitted for each letter typed out.
 signal spoke(letter: String, letter_index: int, speed: float)
-
 ## Emitted when the player skips the typing of dialogue.
 signal skipped_typing()
-
 ## Emitted when typing starts
 signal started_typing()
-
 ## Emitted when typing finishes.
 signal finished_typing()
-
 ## [Deprecated] No longer emitted.
 signal paused_typing(duration: float)
 
-
 ## The action to press to skip typing.
 @export var skip_action: StringName = &"ui_cancel"
-
 ## The speed with which the text types out.
 @export var seconds_per_step: float = 0.02
-
 ## Automatically have a brief pause when these characters are encountered.
 @export var pause_at_characters: String = ".?!"
-
 ## Don't auto pause if the character after the pause is one of these.
 @export var skip_pause_at_character_if_followed_by: String = ")\""
-
 ## Don't auto pause after these abbreviations (only if "." is in `pause_at_characters`).[br]
 ## Abbreviations are limitted to 5 characters in length [br]
 ## Does not support multi-period abbreviations (ex. "p.m.")
 @export var skip_pause_at_abbreviations: PackedStringArray = ["Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex"]
-
 ## The amount of time to pause when exposing a character present in `pause_at_characters`.
 @export var seconds_per_pause_step: float = 0.3
-
-var _already_mutated_indices: PackedInt32Array = []
-
 
 ## The current line of dialogue.
 var dialogue_line:
@@ -53,7 +38,6 @@ var dialogue_line:
 			_update_text()
 	get:
 		return dialogue_line
-
 ## Whether the label is currently typing itself out.
 var is_typing: bool = false:
 	set(value):
@@ -63,8 +47,8 @@ var is_typing: bool = false:
 			finished_typing.emit()
 	get:
 		return _is_typing and not _is_awaiting_mutation
+var _already_mutated_indices: PackedInt32Array = []
 var _is_typing: bool = false
-
 var _last_wait_index: int = -1
 var _last_mutation_index: int = -1
 var _waiting_seconds: float = 0
@@ -86,12 +70,6 @@ func _process(delta: float) -> void:
 			# Make sure any mutations at the end of the line get run
 			_mutate_inline_mutations(get_total_character_count())
 			is_typing = false
-
-
-## Sets the label's text from the current dialogue line. Override if you want
-## to do something more interesting in your subclass.
-func _update_text() -> void:
-	text = dialogue_line.text
 
 
 ## Start typing out the text
@@ -126,9 +104,16 @@ func skip_typing() -> void:
 	skipped_typing.emit()
 
 
+## Sets the label's text from the current dialogue line. Override if you want
+## to do something more interesting in your subclass.
+func _update_text() -> void:
+	text = dialogue_line.text
+
+
 # Type out the next character(s)
 func _type_next(delta: float, seconds_needed: float) -> void:
-	if _is_awaiting_mutation: return
+	if _is_awaiting_mutation:
+		return
 
 	if visible_characters == get_total_character_count():
 		return
@@ -136,7 +121,8 @@ func _type_next(delta: float, seconds_needed: float) -> void:
 	if _last_mutation_index != visible_characters:
 		_last_mutation_index = visible_characters
 		_mutate_inline_mutations(visible_characters)
-		if _is_awaiting_mutation: return
+		if _is_awaiting_mutation:
+			return
 
 	# Pause on characters like "."
 	var waiting_seconds: float = seconds_per_pause_step if _should_auto_pause() else 0
@@ -192,13 +178,15 @@ func _mutate_inline_mutations(index: int) -> void:
 
 # Determine if the current autopause character at the cursor should qualify to pause typing.
 func _should_auto_pause() -> bool:
-	if visible_characters == 0: return false
+	if visible_characters == 0:
+		return false
 
 	var parsed_text: String = get_parsed_text()
 
 	# Avoid outofbounds when the label auto-translates and the text changes to one shorter while typing out
 	# Note: visible characters can be larger than parsed_text after a translation event
-	if visible_characters >= parsed_text.length(): return false
+	if visible_characters >= parsed_text.length():
+		return false
 
 	# Ignore pause characters if they are next to a non-pause character
 	if parsed_text[visible_characters] in skip_pause_at_character_if_followed_by.split():

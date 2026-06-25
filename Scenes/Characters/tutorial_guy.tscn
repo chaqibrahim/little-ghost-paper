@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cf4kftxjvjobd" path="res://Images/Characters/hat.aseprite" id="1_6nydb"]
 [ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_6qkn1"]
 [ext_resource type="PackedScene" uid="uid://dpx233vm6463t" path="res://Scenes/Components/dialogue_animator.tscn" id="3_jyxfy"]
+[ext_resource type="PackedScene" uid="uid://b60kgbsov7joo" path="res://Scenes/Components/sprite_normalizer.tscn" id="4_81m3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(16, 16)
@@ -17,9 +18,10 @@ texture = ExtResource("1_6nydb")
 [node name="Body" type="Sprite2D" parent="." unique_id=1952097139]
 scale = Vector2(2, 2)
 texture = ExtResource("1_6qkn1")
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978996315]
 shape = SubResource("RectangleShape2D_3xd07")
 
 [node name="DialogueAnimator" parent="." unique_id=1595439108 instance=ExtResource("3_jyxfy")]
+
+[node name="SpriteNormalizer" parent="." unique_id=1117604572 instance=ExtResource("4_81m3v")]

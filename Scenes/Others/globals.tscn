@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ccs21dfhdu3y5" path="res://Scenes/Characters/tutorial_guy.tscn" id="7_5kxlb"]
 [ext_resource type="PackedScene" uid="uid://r3it2pmodlut" path="res://Scenes/Effects/warp_effect.tscn" id="8_5kxlb"]
 [ext_resource type="Script" uid="uid://cm1wa05ss8i1l" path="res://Scripts/Globals/game.gd" id="8_bxiyh"]
+[ext_resource type="PackedScene" uid="uid://6282ycayunnc" path="res://Scenes/Components/position_keeper.tscn" id="10_3m3qa"]
 [ext_resource type="Script" uid="uid://dwi73504k3b7u" path="res://Scripts/Globals/spawn.gd" id="13_iow56"]
 [ext_resource type="Script" uid="uid://bndd52q5alyxk" path="res://Scripts/Globals/signal.gd" id="14_47xnx"]
 
@@ -28,6 +29,7 @@ stage2_scene = ExtResource("6_4e6sh")
 player_scene = ExtResource("6_x0rfn")
 tutorial_guy_scene = ExtResource("7_5kxlb")
 warp_effect = ExtResource("8_5kxlb")
+position_keeper = ExtResource("10_3m3qa")
 
 [node name="Layer" type="Node2D" parent="." unique_id=1850359786]
 script = ExtResource("5_i6vhm")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6282ycayunnc"]
+
+[ext_resource type="Script" uid="uid://cohnc2glqj1kh" path="res://Scripts/Components/position_keeper.gd" id="1_pebgr"]
+
+[node name="PositionKeeper" type="Node" unique_id=388365919 groups=["position_keeper"]]
+script = ExtResource("1_pebgr")
