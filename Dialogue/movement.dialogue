@@ -1,37 +1,49 @@
 ~ start
+$> Globals.signalbus.tutorial_guy_talked.emit()
 Tutorial Guy : This place looks spacey enough
-You : Wow, how convenient
+$> Globals.signalbus.player_talked.emit()
+You : Wow, how convenient!
 Tutorial Guy: Lets try learning our movement here
 You: Got it!
 Tutorial Guy: It's a simple control, really
 Tutorial Guy: Just use WASD to move, and space to interact
-You: I think I already did it in main menu
+You: I think I already did it in main menu...
 Tutorial Guy: Yes! It's the same control after all
 You: Sounds simple enough
 Tutorial Guy: Now, just move around as long as you want
-Tutorial Guy: Talk to me again when you want to proceed to the next part
+Tutorial Guy: Talk to me again when you want to proceed to the next part!
 You: Okay!
+$> Globals.game.controllable = true
+=> END
+
+~ border
+$> Globals.game.controllable = false
+Tutorial Guy: Hey, talk to me first before proceeding, okay?
+You: Right, sorry!
+$> Globals.signalbus.dialogue1_finished.emit()
 $> Globals.game.controllable = true
 => END
 
 ~ proceed
 $> Globals.game.controllable = false
-Tutorial Guy: So, you want to proceed ?
+Tutorial Guy: So, do you want to proceed ?
 - Yes
 	You: Sure, let's get going!
-	Tutorial Guy: Okay, now listen carefully
-	Tutorial Guy: Next part is a maze
-	Tutorial Guy: And I cant help you in this part
+	Tutorial Guy: Okay, now listen carefully!
+	Tutorial Guy: The next part is a maze
+	Tutorial Guy: and I can't help you in this part
 	Tutorial Guy: You're gonna need to navigate the maze to the exit
 	Tutorial Guy: Or, you can push around the boxes to make your own path
 	Tutorial Guy: Yep, thats a choice as well
 	You: Interesting...
 	Tutorial Guy: Lemme just go there first so you cant see the route that I take.
-	You: Aw, come on man!
+	You: Oh, come on man!
 	Tutorial Guy: Adios!
 	You: I still can chase you, though!
+	$> Globals.game.controllable = true
 	=> END
 - No
 	You: Hang on, I still want to walk around
 	Tutorial Guy: Just let me know when you're ready!
+	$> Globals.game.controllable = true
 	=> END

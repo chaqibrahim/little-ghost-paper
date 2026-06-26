@@ -6,6 +6,7 @@ extends Node2D
 var player: Node2D
 var tutorial_guy: Node2D
 var interaction_ready := false
+var proceed_ready := false
 
 @onready var player_spawn := $PlayerSpawn
 @onready var tutorial_spawn := $TutorialSpawn
@@ -15,11 +16,14 @@ var interaction_ready := false
 @onready var tutorial_walkpoint3 := $WalkPointTutorial3
 @onready var tutorial_walkpoint4 := $WalkPointTutorial4
 @onready var interation_area := $InteractionArea
+@onready var border_area := $Border
 
 
 func _ready() -> void:
 	interation_area.body_entered.connect(entered_tutorial_interaction)
 	interation_area.body_exited.connect(exited_tutorial_interaction)
+	border_area.body_entered.connect(entered_border)
+	Globals.signalbus.dialogue1_finished.connect(correct_player)
 	walk_in()
 
 
@@ -28,6 +32,11 @@ func _input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("ui_accept"):
 		proceed()
+
+
+func correct_player() -> void:
+	var tween := create_tween()
+	tween.tween_property(player, "global_position", tutorial_walkpoint3.global_position, 0.25)
 
 
 func walk_in() -> void:
@@ -61,5 +70,13 @@ func exited_tutorial_interaction(body: Node2D) -> void:
 	interaction_ready = false
 
 
+func entered_border(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
+	if proceed_ready:
+		return
+	DialogueManager.show_dialogue_balloon(dialogue, "border")
+
+
 func proceed() -> void:
-	pass
+	DialogueManager.show_dialogue_balloon(dialogue, "proceed")

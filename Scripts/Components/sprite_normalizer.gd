@@ -1,7 +1,7 @@
 #sprite_normalizer.gd
 extends Node
 
-const ROTATION_SPEED := 720.0
+const ROTATION_SPEED := 1800.0
 
 var sprite: Sprite2D
 
@@ -18,10 +18,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if not sprite:
 		return
-	if parent.linear_velocity.x > 1:
+	if parent.linear_velocity.x > 0:
 		if sprite.flip_h:
 			sprite.flip_h = false
-	elif parent.linear_velocity.x < 1:
+	elif parent.linear_velocity.x < 0:
 		if not sprite.flip_h:
 			sprite.flip_h = true
 
@@ -30,6 +30,6 @@ func _physics_process(_delta: float) -> void:
 	if parent.global_rotation == 0.0:
 		return
 
-	var torque_to_apply := -parent.global_rotation - parent.angular_velocity
+	var torque_to_apply := -parent.global_rotation #- parent.angular_velocity
 	parent.apply_torque(torque_to_apply * ROTATION_SPEED)
 	#parent.global_rotation = move_toward(parent.global_rotation, 0.0, delta)

@@ -41,3 +41,9 @@ position = Vector2(368, 96)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=783198960]
 position = Vector2(160, 48)
 shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="Border" type="Area2D" parent="." unique_id=963802520]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=954776845]
+position = Vector2(304, 96)
+shape = SubResource("RectangleShape2D_3xd07")
