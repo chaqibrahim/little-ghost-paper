@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d3abcv1fub7vo" path="res://Scripts/Others/main.gd" id="1_mlyjl"]
 [ext_resource type="PackedScene" uid="uid://c51n2taoovj58" path="res://Scenes/Effects/background_particles.tscn" id="2_ft4l2"]
 [ext_resource type="PackedScene" uid="uid://cbk6dw01rb2id" path="res://Scenes/Effects/pixelate_effect.tscn" id="2_gkop6"]
+[ext_resource type="PackedScene" uid="uid://cym0o36gd5kgp" path="res://Scenes/Menus/interact_button.tscn" id="3_7uoth"]
 [ext_resource type="PackedScene" uid="uid://bkuof6vsgevig" path="res://Scenes/Effects/fade_effect.tscn" id="3_ext17"]
 
 [sub_resource type="Environment" id="Environment_ft4l2"]
@@ -101,6 +102,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="InteractButton" parent="ScreenLayer" unique_id=26886971 instance=ExtResource("3_7uoth")]
+visible = false
+layout_mode = 1
 
 [node name="PixelateEffect" parent="ScreenLayer" unique_id=289947587 instance=ExtResource("2_gkop6")]
 layout_mode = 1

@@ -13,3 +13,25 @@ Tutorial Guy: Talk to me again when you want to proceed to the next part
 You: Okay!
 $> Globals.game.controllable = true
 => END
+
+~ proceed
+$> Globals.game.controllable = false
+Tutorial Guy: So, you want to proceed ?
+- Yes
+	You: Sure, let's get going!
+	Tutorial Guy: Okay, now listen carefully
+	Tutorial Guy: Next part is a maze
+	Tutorial Guy: And I cant help you in this part
+	Tutorial Guy: You're gonna need to navigate the maze to the exit
+	Tutorial Guy: Or, you can push around the boxes to make your own path
+	Tutorial Guy: Yep, thats a choice as well
+	You: Interesting...
+	Tutorial Guy: Lemme just go there first so you cant see the route that I take.
+	You: Aw, come on man!
+	Tutorial Guy: Adios!
+	You: I still can chase you, though!
+	=> END
+- No
+	You: Hang on, I still want to walk around
+	Tutorial Guy: Just let me know when you're ready!
+	=> END

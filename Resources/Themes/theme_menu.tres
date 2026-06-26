@@ -15,3 +15,6 @@ Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_37b11")
 Button/styles/focus = SubResource("StyleBoxFlat_37b11")
 Button/styles/normal = SubResource("StyleBoxFlat_qy5nh")
+Label/constants/outline_size = 4
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1_37b11")

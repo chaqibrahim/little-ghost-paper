@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://b4iwdhutol25v" path="res://Scripts/Stages/stage_2.gd" id="1_ib1ht"]
 [ext_resource type="Resource" uid="uid://c2di5c6vbhnpr" path="res://Dialogue/movement.dialogue" id="2_m1qd2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(32, 32)
+
 [node name="Stage2" type="Node2D" unique_id=832142522]
 script = ExtResource("1_ib1ht")
 dialogue = ExtResource("2_m1qd2")
@@ -23,3 +26,18 @@ position = Vector2(160, 88)
 
 [node name="WalkPointTutorial" type="Marker2D" parent="." unique_id=885209624]
 position = Vector2(160, 48)
+
+[node name="WalkPointTutorial2" type="Marker2D" parent="." unique_id=940896937]
+position = Vector2(272, 48)
+
+[node name="WalkPointTutorial3" type="Marker2D" parent="." unique_id=621195124]
+position = Vector2(272, 96)
+
+[node name="WalkPointTutorial4" type="Marker2D" parent="." unique_id=1325331253]
+position = Vector2(368, 96)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1002274177]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=783198960]
+position = Vector2(160, 48)
+shape = SubResource("RectangleShape2D_3xd07")

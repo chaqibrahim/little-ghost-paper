@@ -7,3 +7,5 @@ signal dialogue2_finished
 signal dialogue3_finished
 signal player_talked
 signal tutorial_guy_talked
+signal interaction_shown
+signal interaction_hidden
