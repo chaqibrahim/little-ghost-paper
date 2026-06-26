@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dx66cixyg6rf2"
-path="res://.godot/imported/Micro5-Regular.ttf-5afc540fa6bad153b857f6775850972e.fontdata"
+uid="uid://c7f7vu1f4oofl"
+path="res://.godot/imported/ark-pixel-10px-monospaced-latin.ttf-45730c5866420314ebdbd66f2f7030d8.fontdata"
 
 [deps]
 
-source_file="res://Resources/Micro5-Regular.ttf"
-dest_files=["res://.godot/imported/Micro5-Regular.ttf-5afc540fa6bad153b857f6775850972e.fontdata"]
+source_file="res://Resources/Fonts/ark-pixel-10px-monospaced-latin.ttf"
+dest_files=["res://.godot/imported/ark-pixel-10px-monospaced-latin.ttf-45730c5866420314ebdbd66f2f7030d8.fontdata"]
 
 [params]
 
