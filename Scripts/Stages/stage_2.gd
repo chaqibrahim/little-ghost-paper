@@ -5,7 +5,6 @@ extends Node2D
 
 var player: Node2D
 var tutorial_guy: Node2D
-var interaction_ready := false
 var proceed_ready := false
 
 @onready var player_spawn := $PlayerSpawn
@@ -28,7 +27,7 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if not interaction_ready:
+	if not Globals.menu.interaction_ready:
 		return
 	if event.is_action_pressed("ui_accept"):
 		proceed()
@@ -59,15 +58,13 @@ func walk_in() -> void:
 func entered_tutorial_interaction(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
-	Globals.signalbus.interaction_shown.emit()
-	interaction_ready = true
+	Globals.menu.interaction_button.show()
 
 
 func exited_tutorial_interaction(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
-	Globals.signalbus.interaction_hidden.emit()
-	interaction_ready = false
+	Globals.menu.interaction_button.hide()
 
 
 func entered_border(body: Node2D) -> void:

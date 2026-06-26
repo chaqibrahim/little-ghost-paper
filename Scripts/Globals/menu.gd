@@ -8,6 +8,8 @@ enum MenuList {
 }
 
 var menu_list := { }
+var interaction_button: Control
+var interaction_ready := false
 
 
 func _ready() -> void:
