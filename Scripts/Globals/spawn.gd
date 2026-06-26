@@ -5,6 +5,7 @@ extends Node2D
 enum SpawnList {
 	PLAYER,
 	TUTORIAL_GUY,
+	WALL,
 }
 
 var spawn_list := { }
@@ -20,6 +21,7 @@ func setup_dictionaries() -> void:
 	spawn_list = {
 		SpawnList.PLAYER: Globals.reference.player_scene,
 		SpawnList.TUTORIAL_GUY: Globals.reference.tutorial_guy_scene,
+		SpawnList.WALL: Globals.reference.wall_scene,
 	}
 
 

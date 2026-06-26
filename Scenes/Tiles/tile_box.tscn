@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxserjdnhe6i5"]
+
+[ext_resource type="Texture2D" uid="uid://b2fidtnvaj2kr" path="res://Images/Tiles/box.aseprite" id="1_b1irj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(12, 12)
+
+[node name="TileBox" type="RigidBody2D" unique_id=1706482438]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=164805933]
+scale = Vector2(2, 2)
+texture = ExtResource("1_b1irj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=571323633]
+shape = SubResource("RectangleShape2D_3xd07")

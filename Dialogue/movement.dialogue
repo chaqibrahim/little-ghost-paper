@@ -51,6 +51,7 @@ Tutorial Guy: So, do you want to proceed ?
 	You: Oh, come on man!
 	Tutorial Guy: Adios!
 	You: I still can chase you, though!
+	$> Globals.signalbus.dialogue2_finished.emit()
 	$> Globals.game.controllable = true
 	=> END
 - No

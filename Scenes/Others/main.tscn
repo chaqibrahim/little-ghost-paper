@@ -43,12 +43,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.7490196, 0.7490196, 0.7490196, 1)
 
-[node name="BackgroundParticles" parent="BackgroundLayer" unique_id=1523793957 instance=ExtResource("2_ft4l2")]
-
-[node name="BackgroundParticles2" parent="BackgroundLayer" unique_id=21643857 instance=ExtResource("2_ft4l2")]
-position = Vector2(320, 90)
-rotation = 3.1415927
-
 [node name="StageLayer" type="Control" parent="." unique_id=1898833649]
 layout_mode = 1
 anchors_preset = 15
@@ -84,6 +78,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="BackgroundParticles" parent="FrontLayer" unique_id=1523793957 instance=ExtResource("2_ft4l2")]
+
+[node name="BackgroundParticles2" parent="FrontLayer" unique_id=21643857 instance=ExtResource("2_ft4l2")]
+position = Vector2(320, 90)
+rotation = -3.1415925
 
 [node name="MenuLayer" type="Control" parent="." unique_id=545865284]
 layout_mode = 1

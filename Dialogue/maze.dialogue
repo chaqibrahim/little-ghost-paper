@@ -1,0 +1,11 @@
+~ start
+You : Dang, he really is gone huh ?
+Tutorial Guy : I told you!
+Tutorial Guy : I'm still observing you though
+You: ...
+$> Globals.game.controllable = true
+=> END
+
+~ finished
+Tutorial Guy: That's how you do it? Really?
+=> END

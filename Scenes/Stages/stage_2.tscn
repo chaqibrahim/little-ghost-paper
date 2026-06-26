@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dwukibdfa58g7" path="res://Resources/Tileset/tileset.tres" id="1_gomsh"]
 [ext_resource type="Script" uid="uid://b4iwdhutol25v" path="res://Scripts/Stages/stage_2.gd" id="1_ib1ht"]
 [ext_resource type="Resource" uid="uid://c2di5c6vbhnpr" path="res://Dialogue/movement.dialogue" id="2_m1qd2"]
+[ext_resource type="PackedScene" uid="uid://dpab12mynlpkf" path="res://Scenes/Components/interaction_area.tscn" id="4_t6maq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(32, 32)
@@ -17,6 +18,12 @@ tile_set = ExtResource("1_gomsh")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1209097483]
 position = Vector2(160, 208)
+
+[node name="BarrierSpawn" type="Marker2D" parent="." unique_id=1327941912]
+position = Vector2(168, 168)
+
+[node name="BarrierSpawn2" type="Marker2D" parent="." unique_id=594392448]
+position = Vector2(152, 168)
 
 [node name="TutorialSpawn" type="Marker2D" parent="." unique_id=2057660920]
 position = Vector2(160, 184)
@@ -36,7 +43,7 @@ position = Vector2(272, 96)
 [node name="WalkPointTutorial4" type="Marker2D" parent="." unique_id=1325331253]
 position = Vector2(368, 96)
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=1002274177]
+[node name="InteractionArea" parent="." unique_id=1007621583 instance=ExtResource("4_t6maq")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=783198960]
 position = Vector2(160, 48)
@@ -45,5 +52,5 @@ shape = SubResource("RectangleShape2D_3xd07")
 [node name="Border" type="Area2D" parent="." unique_id=963802520]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=954776845]
-position = Vector2(304, 96)
+position = Vector2(336, 96)
 shape = SubResource("RectangleShape2D_3xd07")

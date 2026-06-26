@@ -5,6 +5,7 @@ extends Node2D
 enum StageList {
 	STAGE_1,
 	STAGE_2,
+	STAGE_3,
 }
 
 var stage_list := { }
@@ -21,6 +22,7 @@ func setup_dictionaries() -> void:
 	stage_list = {
 		StageList.STAGE_1: Globals.reference.stage1_scene,
 		StageList.STAGE_2: Globals.reference.stage2_scene,
+		StageList.STAGE_3: Globals.reference.stage3_scene,
 	}
 
 

@@ -11,9 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://1qnvbw4femld" path="res://Scenes/Characters/player.tscn" id="6_x0rfn"]
 [ext_resource type="Script" uid="uid://dow3aoxwp87om" path="res://Scripts/Globals/effect.gd" id="7_0s48f"]
 [ext_resource type="PackedScene" uid="uid://ccs21dfhdu3y5" path="res://Scenes/Characters/tutorial_guy.tscn" id="7_5kxlb"]
+[ext_resource type="PackedScene" uid="uid://kyed34ijoaqd" path="res://Scenes/Stages/stage_3.tscn" id="7_p0ns3"]
 [ext_resource type="PackedScene" uid="uid://r3it2pmodlut" path="res://Scenes/Effects/warp_effect.tscn" id="8_5kxlb"]
 [ext_resource type="Script" uid="uid://cm1wa05ss8i1l" path="res://Scripts/Globals/game.gd" id="8_bxiyh"]
 [ext_resource type="PackedScene" uid="uid://6282ycayunnc" path="res://Scenes/Components/position_keeper.tscn" id="10_3m3qa"]
+[ext_resource type="PackedScene" uid="uid://c7fnd4ewqpqv1" path="res://Scenes/Tiles/tile_wall.tscn" id="12_0lkdq"]
 [ext_resource type="Script" uid="uid://dwi73504k3b7u" path="res://Scripts/Globals/spawn.gd" id="13_iow56"]
 [ext_resource type="Script" uid="uid://bndd52q5alyxk" path="res://Scripts/Globals/signal.gd" id="14_47xnx"]
 
@@ -26,8 +28,10 @@ disclaimer_scene = ExtResource("2_jyc0d")
 mainmenu_scene = ExtResource("3_0e3jl")
 stage1_scene = ExtResource("5_vmcjh")
 stage2_scene = ExtResource("6_4e6sh")
+stage3_scene = ExtResource("7_p0ns3")
 player_scene = ExtResource("6_x0rfn")
 tutorial_guy_scene = ExtResource("7_5kxlb")
+wall_scene = ExtResource("12_0lkdq")
 warp_effect = ExtResource("8_5kxlb")
 position_keeper = ExtResource("10_3m3qa")
 

@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://fcu5ejij8eyf" path="res://Scenes/Tiles/tile_floor.tscn" id="1_6olwa"]
 [ext_resource type="PackedScene" uid="uid://c7fnd4ewqpqv1" path="res://Scenes/Tiles/tile_wall.tscn" id="2_pp5bd"]
+[ext_resource type="PackedScene" uid="uid://cxserjdnhe6i5" path="res://Scenes/Tiles/tile_box.tscn" id="3_pp5bd"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_eeojf"]
 scenes/1/scene = ExtResource("1_6olwa")
 scenes/2/scene = ExtResource("2_pp5bd")
+scenes/3/scene = ExtResource("3_pp5bd")
 
 [resource]
 sources/0 = SubResource("TileSetScenesCollectionSource_eeojf")
