@@ -45,6 +45,7 @@ enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", 
 player=""
 tutorial_guy=""
 position_keeper=""
+opponent=""
 
 [input]
 

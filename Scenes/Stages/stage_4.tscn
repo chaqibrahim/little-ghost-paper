@@ -22,5 +22,5 @@ position = Vector2(200, 88)
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1527355051]
 position = Vector2(-16, 88)
 
-[node name="TutorialGuy" parent="." unique_id=829174031 instance=ExtResource("3_k6uff")]
+[node name="TutorialGuy" parent="." unique_id=829174031 groups=["opponent"] instance=ExtResource("3_k6uff")]
 position = Vector2(216, 88)

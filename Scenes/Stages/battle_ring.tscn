@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8vm2es66lhw6" path="res://Scripts/Stages/battle_ring.gd" id="1_kylug"]
 [ext_resource type="TileSet" uid="uid://dwukibdfa58g7" path="res://Resources/Tileset/tileset.tres" id="1_tghbk"]
+[ext_resource type="Resource" uid="uid://b6ownymi3ous5" path="res://Dialogue/battle.dialogue" id="2_va5l6"]
 [ext_resource type="PackedScene" uid="uid://qnohhmmomqgx" path="res://Scenes/Menus/battle_ui.tscn" id="2_wfheq"]
 
 [node name="BattleRing" type="Control" unique_id=1277203163]
@@ -12,6 +13,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kylug")
+dialogue = ExtResource("2_va5l6")
+
+[node name="Center" type="Marker2D" parent="." unique_id=18250736]
+position = Vector2(160, 88)
+
+[node name="PlayerPos" type="Marker2D" parent="." unique_id=1199814643]
+position = Vector2(120, 88)
+
+[node name="OpponentPos" type="Marker2D" parent="." unique_id=1015316020]
+position = Vector2(200, 88)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=940681828]
 tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAABAANAAIAAAAAAAAABAANAAgAAAAAAAAABAAGAAgAAAAAAAAABAAHAAIAAAAAAAAABQAIAAIAAAAAAAAABQAJAAIAAAAAAAAABQAKAAIAAAAAAAAABQALAAIAAAAAAAAABQAMAAIAAAAAAAAABQAHAAgAAAAAAAAABQAIAAgAAAAAAAAABQAJAAgAAAAAAAAABQAKAAgAAAAAAAAABQALAAgAAAAAAAAABQAMAAgAAAAAAAAABQANAAMAAAAAAAAABgANAAQAAAAAAAAABgANAAUAAAAAAAAABgANAAYAAAAAAAAABgANAAcAAAAAAAAABgAGAAMAAAAAAAAABgAGAAQAAAAAAAAABgAGAAUAAAAAAAAABgAGAAYAAAAAAAAABgAGAAcAAAAAAAAABgA=")

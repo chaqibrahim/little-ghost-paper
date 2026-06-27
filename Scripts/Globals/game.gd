@@ -9,6 +9,8 @@ enum StageList {
 	STAGE_4,
 }
 
+var need_attack_tutorial := true
+var need_defend_tutorial := true
 var stage_list := { }
 var controllable := false
 var battle_map: Control

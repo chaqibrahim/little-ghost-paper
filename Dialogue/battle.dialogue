@@ -3,13 +3,13 @@ Tutorial Guy: Now, lets learn another mechanic!
 You: Sure
 Tutorial Guy: It's time to d-d-d-duel!
 You: Wut
-$> Globals.game.initiate_battle()
 Tutorial Guy: Just a friendly battle, you know
 Tutorial Guy: Not trying to be murderous
 Tutorial Guy: Just attack each other until the hp is 1
 Tutorial Guy: Because at 0 hp we will die
 You: Friendly battle, got it
 Tutorial Guy: Lets start the battle!
+$> Globals.game.initiate_battle()
 => first_turn
 => END
 
@@ -24,16 +24,27 @@ Tutorial Guy: Press SPACE at the center to initiate attack
 Tutorial Guy: If you miss, your attack will be failed
 You: Sounds simple enough!
 Tutorial Guy: Let's start with your turn!
+=> my_turn
 => END
 
 ~ my_turn
+You: My turn!
+=> player_attempt
+=> END
+
+~ player_attempt
 You: What should I do ?
 - Attack
 	$> Globals.signalbus.player_attacked.emit()
 	=> END
 - Item
 	You: I don't really have anything at the moment
-	=> my_turn
+	=> player_attempt
 - Run
 	You: I'm surrounded by these borders!
-	=> my_turn
+	=> player_attempt
+
+~ opponent_turn
+Player : Your turn!
+$> Globals.signalbus.enemy_attacked.emit()
+=> END
