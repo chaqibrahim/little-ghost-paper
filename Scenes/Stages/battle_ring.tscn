@@ -1,9 +1,19 @@
 [gd_scene format=4 uid="uid://hjyym4q42cuc"]
 
 [ext_resource type="TileSet" uid="uid://dwukibdfa58g7" path="res://Resources/Tileset/tileset.tres" id="1_tghbk"]
+[ext_resource type="PackedScene" uid="uid://qnohhmmomqgx" path="res://Scenes/Menus/battle_ui.tscn" id="2_wfheq"]
 
-[node name="BattleRing" type="Node2D" unique_id=1055899065]
+[node name="BattleRing" type="Control" unique_id=1277203163]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=940681828]
 tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAABAANAAIAAAAAAAAABAANAAgAAAAAAAAABAAGAAgAAAAAAAAABAAHAAIAAAAAAAAABQAIAAIAAAAAAAAABQAJAAIAAAAAAAAABQAKAAIAAAAAAAAABQALAAIAAAAAAAAABQAMAAIAAAAAAAAABQAHAAgAAAAAAAAABQAIAAgAAAAAAAAABQAJAAgAAAAAAAAABQAKAAgAAAAAAAAABQALAAgAAAAAAAAABQAMAAgAAAAAAAAABQANAAMAAAAAAAAABgANAAQAAAAAAAAABgANAAUAAAAAAAAABgANAAYAAAAAAAAABgANAAcAAAAAAAAABgAGAAMAAAAAAAAABgAGAAQAAAAAAAAABgAGAAUAAAAAAAAABgAGAAYAAAAAAAAABgAGAAcAAAAAAAAABgA=")
 tile_set = ExtResource("1_tghbk")
+
+[node name="BattleUI" parent="." unique_id=1114201918 instance=ExtResource("2_wfheq")]
+layout_mode = 1

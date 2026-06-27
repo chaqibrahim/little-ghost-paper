@@ -11,7 +11,7 @@ enum StageList {
 
 var stage_list := { }
 var controllable := false
-var battle_map: Node2D
+var battle_map: Control
 var player_health := 100
 var player_max_health := 100
 var opponent_health := 100
@@ -49,7 +49,7 @@ func show_stage(stage: StageList) -> void:
 
 
 func initiate_battle() -> void:
-	var battle_ring: Node2D = Globals.reference.battle_map.instantiate()
+	var battle_ring: Control = Globals.reference.battle_map.instantiate()
 	Globals.layer.stage_layer.add_child(battle_ring)
 	Globals.effect.show_effect(
 		Effect.EffectList.WARP,

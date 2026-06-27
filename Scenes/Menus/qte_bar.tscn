@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://e0dloi4ai5vf"]
+
+[ext_resource type="Script" uid="uid://mtiu0k70hs4c" path="res://Scripts/Menus/qte_bar.gd" id="1_ebito"]
+
+[node name="QTEBar" type="Control" unique_id=1909321815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ebito")
+
+[node name="Full" type="ColorRect" parent="." unique_id=1423894694]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -30.0
+offset_right = 80.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+
+[node name="Target" type="ColorRect" parent="." unique_id=1190917437]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(1, 1, 1, 0.5)
+
+[node name="Trigger" type="ColorRect" parent="." unique_id=1347141432]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -35.0
+offset_right = 5.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Left" type="Marker2D" parent="." unique_id=472028447]
+position = Vector2(80, 155)
+
+[node name="Right" type="Marker2D" parent="." unique_id=720279913]
+position = Vector2(240, 155)

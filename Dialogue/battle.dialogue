@@ -14,6 +14,7 @@ Tutorial Guy: Lets start the battle!
 => END
 
 ~ first_turn
+You: Let's go!
 Tutorial Guy: It's a simple turn based battle, really
 Tutorial Guy: Totally inspired by one of the best turn based RPG
 Tutorial Guy: They even put it as example for this project
@@ -22,11 +23,13 @@ Tutorial Guy: When you attack, there is gonna be a QTE bar
 Tutorial Guy: Press SPACE at the center to initiate attack
 Tutorial Guy: If you miss, your attack will be failed
 You: Sounds simple enough!
+Tutorial Guy: Let's start with your turn!
 => END
 
 ~ my_turn
 You: What should I do ?
 - Attack
+	=> END
 - Item
 	You: I don't really have anything at the moment
 	=> my_turn
