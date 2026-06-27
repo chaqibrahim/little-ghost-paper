@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgs0f35ml7hq8"]
+
+[ext_resource type="Texture2D" uid="uid://ccjun04c8ws2w" path="res://Images/Tiles/ring_corner.aseprite" id="1_0c4lg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex1jf"]
+size = Vector2(16, 16)
+
+[node name="RingCorner" type="StaticBody2D" unique_id=1358750598]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2003194677]
+scale = Vector2(2, 2)
+texture = ExtResource("1_0c4lg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=328458339]
+shape = SubResource("RectangleShape2D_ex1jf")

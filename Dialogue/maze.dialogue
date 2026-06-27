@@ -7,5 +7,7 @@ $> Globals.game.controllable = true
 => END
 
 ~ finished
+$> Globals.game.controllable = false
 Tutorial Guy: That's how you do it? Really?
+$> Globals.game.controllable = true
 => END

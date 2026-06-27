@@ -3,6 +3,7 @@ extends Node2D
 
 @export var dialogue: DialogueResource
 
+var finished := false
 var player: Node2D
 
 @onready var spawn_position := $SpawnPos
@@ -14,6 +15,9 @@ var player: Node2D
 
 
 func _ready() -> void:
+	dialogue_trigger.body_entered.connect(finish_dialogue)
+	stage_warp.body_entered.connect(change_stage)
+
 	Globals.spawn.spawn_character(Spawn.SpawnList.PLAYER, spawn_position.global_position, 0.0)
 	await get_tree().create_timer(0.5).timeout
 	player = get_tree().get_first_node_in_group("player")
@@ -25,3 +29,18 @@ func _ready() -> void:
 	Globals.spawn.spawn_character(Spawn.SpawnList.WALL, barrier_position2.global_position, 0.0)
 
 	DialogueManager.show_dialogue_balloon(dialogue, "start")
+
+
+func finish_dialogue(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
+	if finished:
+		return
+	DialogueManager.show_dialogue_balloon(dialogue, "finished")
+	finished = true
+
+
+func change_stage(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
+	Globals.game.show_stage(Game.StageList.STAGE_4)

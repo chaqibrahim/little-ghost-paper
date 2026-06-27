@@ -6,10 +6,12 @@ enum StageList {
 	STAGE_1,
 	STAGE_2,
 	STAGE_3,
+	STAGE_4,
 }
 
 var stage_list := { }
 var controllable := false
+var battle_map: Node2D
 
 
 func _ready() -> void:
@@ -23,6 +25,7 @@ func setup_dictionaries() -> void:
 		StageList.STAGE_1: Globals.reference.stage1_scene,
 		StageList.STAGE_2: Globals.reference.stage2_scene,
 		StageList.STAGE_3: Globals.reference.stage3_scene,
+		StageList.STAGE_4: Globals.reference.stage4_scene,
 	}
 
 
@@ -39,3 +42,15 @@ func show_stage(stage: StageList) -> void:
 	Globals.layer.clear_layer(Layer.LayerList.CHARACTER)
 	Globals.layer.stage_layer.add_child(new_stage)
 	Globals.effect.pixelate_effect.unpixelate()
+
+
+func initiate_battle() -> void:
+	var battle_ring: Node2D = Globals.reference.battle_map.instantiate()
+	Globals.layer.stage_layer.add_child(battle_ring)
+	Globals.effect.show_effect(
+		Effect.EffectList.WARP,
+		Effect.EffectLayer.FRONT,
+		Globals.reference.screen_center,
+		0.0,
+	)
+	battle_map = battle_ring
