@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://ftoqm0fjiydn"]
+
+[ext_resource type="FontFile" uid="uid://c7f7vu1f4oofl" path="res://Resources/Fonts/ark-pixel-10px-monospaced-latin.ttf" id="1_m1r10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umih6"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1r10"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+ProgressBar/constants/outline_size = 4
+ProgressBar/font_sizes/font_size = 8
+ProgressBar/fonts/font = ExtResource("1_m1r10")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_umih6")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_m1r10")

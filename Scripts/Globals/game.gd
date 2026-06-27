@@ -12,6 +12,10 @@ enum StageList {
 var stage_list := { }
 var controllable := false
 var battle_map: Node2D
+var player_health := 100
+var player_max_health := 100
+var opponent_health := 100
+var opponent_max_health := 100
 
 
 func _ready() -> void:

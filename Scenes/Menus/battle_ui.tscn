@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://qnohhmmomqgx"]
+
+[ext_resource type="Script" uid="uid://csbrs1gci541k" path="res://Scripts/Menus/battle_ui.gd" id="1_ab4vq"]
+[ext_resource type="Theme" uid="uid://cpo1vbwac5moe" path="res://Resources/Themes/theme_menu.tres" id="1_g3x6y"]
+[ext_resource type="Theme" uid="uid://ftoqm0fjiydn" path="res://Resources/Themes/theme_battle.tres" id="2_2ok5x"]
+
+[node name="BattleUI" type="Control" unique_id=1114201918]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ab4vq")
+
+[node name="YouHealth" type="ProgressBar" parent="." unique_id=1283915862]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 33.0
+theme = ExtResource("2_2ok5x")
+step = 1.0
+value = 50.0
+
+[node name="OpponentHealth" type="ProgressBar" parent="." unique_id=835683646]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 33.0
+theme = ExtResource("2_2ok5x")
+step = 1.0
+value = 50.0
+fill_mode = 1
+
+[node name="You" type="Label" parent="." unique_id=585936763]
+layout_mode = 1
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme = ExtResource("1_g3x6y")
+theme_override_font_sizes/font_size = 16
+text = "You"
+
+[node name="Opponent" type="Label" parent="." unique_id=1154782548]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_top = 8.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme = ExtResource("1_g3x6y")
+theme_override_font_sizes/font_size = 16
+text = "Opponent"
+horizontal_alignment = 2
