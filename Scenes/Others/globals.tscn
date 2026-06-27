@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgmpf3f1qetqt" path="res://Scenes/Menus/main_menu.tscn" id="3_0e3jl"]
 [ext_resource type="Script" uid="uid://brs1uu78nmaqn" path="res://Scripts/Globals/reference.gd" id="4_0e3jl"]
 [ext_resource type="Script" uid="uid://bp7uujuhvv8f3" path="res://Scripts/Globals/layer.gd" id="5_i6vhm"]
+[ext_resource type="PackedScene" uid="uid://e0dloi4ai5vf" path="res://Scenes/Menus/qte_bar.tscn" id="5_pbefe"]
 [ext_resource type="PackedScene" uid="uid://d16hptpsn1bbt" path="res://Scenes/Stages/stage_1.tscn" id="5_vmcjh"]
 [ext_resource type="PackedScene" uid="uid://d3qu3epagxcmu" path="res://Scenes/Stages/stage_2.tscn" id="6_4e6sh"]
 [ext_resource type="Script" uid="uid://cucp3j5b18lni" path="res://Scripts/Globals/menu.gd" id="6_f6rvj"]
@@ -28,6 +29,7 @@ script = ExtResource("1_nnkp2")
 script = ExtResource("4_0e3jl")
 disclaimer_scene = ExtResource("2_jyc0d")
 mainmenu_scene = ExtResource("3_0e3jl")
+qte_scene = ExtResource("5_pbefe")
 stage1_scene = ExtResource("5_vmcjh")
 stage2_scene = ExtResource("6_4e6sh")
 stage3_scene = ExtResource("7_p0ns3")

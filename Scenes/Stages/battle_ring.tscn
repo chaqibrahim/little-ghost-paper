@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://hjyym4q42cuc"]
 
+[ext_resource type="Script" uid="uid://8vm2es66lhw6" path="res://Scripts/Stages/battle_ring.gd" id="1_kylug"]
 [ext_resource type="TileSet" uid="uid://dwukibdfa58g7" path="res://Resources/Tileset/tileset.tres" id="1_tghbk"]
 [ext_resource type="PackedScene" uid="uid://qnohhmmomqgx" path="res://Scenes/Menus/battle_ui.tscn" id="2_wfheq"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kylug")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=940681828]
 tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAABAANAAIAAAAAAAAABAANAAgAAAAAAAAABAAGAAgAAAAAAAAABAAHAAIAAAAAAAAABQAIAAIAAAAAAAAABQAJAAIAAAAAAAAABQAKAAIAAAAAAAAABQALAAIAAAAAAAAABQAMAAIAAAAAAAAABQAHAAgAAAAAAAAABQAIAAgAAAAAAAAABQAJAAgAAAAAAAAABQAKAAgAAAAAAAAABQALAAgAAAAAAAAABQAMAAgAAAAAAAAABQANAAMAAAAAAAAABgANAAQAAAAAAAAABgANAAUAAAAAAAAABgANAAYAAAAAAAAABgANAAcAAAAAAAAABgAGAAMAAAAAAAAABgAGAAQAAAAAAAAABgAGAAUAAAAAAAAABgAGAAYAAAAAAAAABgAGAAcAAAAAAAAABgA=")

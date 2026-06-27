@@ -9,3 +9,9 @@ signal player_talked
 signal tutorial_guy_talked
 signal interaction_shown
 signal interaction_hidden
+signal player_attacked
+signal player_succeed
+signal player_failed
+signal enemy_attacked
+signal enemy_succeed
+signal enemy_failed

@@ -29,6 +29,7 @@ Tutorial Guy: Let's start with your turn!
 ~ my_turn
 You: What should I do ?
 - Attack
+	$> Globals.signalbus.player_attacked.emit()
 	=> END
 - Item
 	You: I don't really have anything at the moment
