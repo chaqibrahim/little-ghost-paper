@@ -8,10 +8,15 @@ enum StageList {
 	STAGE_3,
 	STAGE_4,
 }
+enum AttackList {
+	TUTORIAL,
+	BOSS,
+}
 
 var need_attack_tutorial := true
 var need_defend_tutorial := true
 var stage_list := { }
+var attack_list := { }
 var controllable := false
 var battle_map: Control
 var player_health := 100
@@ -33,6 +38,9 @@ func setup_dictionaries() -> void:
 		StageList.STAGE_3: Globals.reference.stage3_scene,
 		StageList.STAGE_4: Globals.reference.stage4_scene,
 	}
+	attack_list = {
+		AttackList.TUTORIAL: Globals.reference.tutorial_attack,
+	}
 
 
 func show_stage(stage: StageList) -> void:
@@ -50,9 +58,13 @@ func show_stage(stage: StageList) -> void:
 	Globals.effect.pixelate_effect.unpixelate()
 
 
-func initiate_battle() -> void:
+func initiate_battle(opponent: AttackList) -> void:
+	Globals.effect.pixelate_effect.pixelate()
+	await get_tree().create_timer(0.5).timeout
 	var battle_ring: Control = Globals.reference.battle_map.instantiate()
+	battle_ring.opponent_attack = opponent
 	Globals.layer.stage_layer.add_child(battle_ring)
+	Globals.effect.pixelate_effect.unpixelate()
 	Globals.effect.show_effect(
 		Effect.EffectList.WARP,
 		Effect.EffectLayer.FRONT,

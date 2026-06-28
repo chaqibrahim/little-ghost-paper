@@ -18,11 +18,17 @@ dialogue = ExtResource("2_va5l6")
 [node name="Center" type="Marker2D" parent="." unique_id=18250736]
 position = Vector2(160, 88)
 
+[node name="PlayerPrePos" type="Marker2D" parent="." unique_id=1171277932]
+position = Vector2(112, 88)
+
 [node name="PlayerPos" type="Marker2D" parent="." unique_id=1199814643]
 position = Vector2(120, 88)
 
 [node name="OpponentPos" type="Marker2D" parent="." unique_id=1015316020]
 position = Vector2(200, 88)
+
+[node name="DodgePos" type="Marker2D" parent="." unique_id=1944063812]
+position = Vector2(200, 56)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=940681828]
 tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAABAANAAIAAAAAAAAABAANAAgAAAAAAAAABAAGAAgAAAAAAAAABAAHAAIAAAAAAAAABQAIAAIAAAAAAAAABQAJAAIAAAAAAAAABQAKAAIAAAAAAAAABQALAAIAAAAAAAAABQAMAAIAAAAAAAAABQAHAAgAAAAAAAAABQAIAAgAAAAAAAAABQAJAAgAAAAAAAAABQAKAAgAAAAAAAAABQALAAgAAAAAAAAABQAMAAgAAAAAAAAABQANAAMAAAAAAAAABgANAAQAAAAAAAAABgANAAUAAAAAAAAABgANAAYAAAAAAAAABgANAAcAAAAAAAAABgAGAAMAAAAAAAAABgAGAAQAAAAAAAAABgAGAAUAAAAAAAAABgAGAAYAAAAAAAAABgAGAAcAAAAAAAAABgA=")

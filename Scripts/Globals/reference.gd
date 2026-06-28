@@ -12,10 +12,12 @@ extends Node2D
 @export var stage3_scene: PackedScene
 @export var stage4_scene: PackedScene
 @export var battle_map: PackedScene
+@export var opponent_attack: PackedScene
 @export_group("Character Scenes")
 @export var player_scene: PackedScene
 @export var tutorial_guy_scene: PackedScene
 @export var wall_scene: PackedScene
+@export var tutorial_attack: PackedScene
 @export_group("Effect Scenes")
 @export var warp_effect: PackedScene
 @export_group("Others")

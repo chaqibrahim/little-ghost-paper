@@ -9,7 +9,7 @@ Tutorial Guy: Just attack each other until the hp is 1
 Tutorial Guy: Because at 0 hp we will die
 You: Friendly battle, got it
 Tutorial Guy: Lets start the battle!
-$> Globals.game.initiate_battle()
+$> Globals.game.initiate_battle(Globals.game.AttackList.TUTORIAL)
 => first_turn
 => END
 
@@ -19,13 +19,11 @@ Tutorial Guy: It's a simple turn based battle, really
 Tutorial Guy: Totally inspired by one of the best turn based RPG
 Tutorial Guy: They even put it as example for this project
 You: Right, I'm kinda familiar with it
-Tutorial Guy: When you attack, there is gonna be a QTE bar
-Tutorial Guy: Press SPACE at the center to initiate attack
-Tutorial Guy: If you miss, your attack will be failed
-You: Sounds simple enough!
 Tutorial Guy: Let's start with your turn!
 => my_turn
 => END
+
+
 
 ~ my_turn
 You: My turn!
@@ -35,6 +33,12 @@ You: My turn!
 ~ player_attempt
 You: What should I do ?
 - Attack
+	if Globals.game.need_attack_tutorial:
+		Tutorial Guy: When you attack, there is gonna be a QTE bar
+		Tutorial Guy: Press SPACE while the bar at the center to initiate attack
+		Tutorial Guy: If you miss, your attack will fail
+		You: Sounds simple enough!
+		$> Globals.game.need_attack_tutorial = false
 	$> Globals.signalbus.player_attacked.emit()
 	=> END
 - Item
@@ -46,5 +50,10 @@ You: What should I do ?
 
 ~ opponent_turn
 Player : Your turn!
+if Globals.game.need_defend_tutorial:
+	Tutorial Guy: Now you should dodge with WASD
+	Tutorial Guy: Anything RED on screen means danger
+	Tutorial Guy: Try to survive for 10 seconds, okay?
+	$> Globals.game.need_defend_tutorial = false
 $> Globals.signalbus.enemy_attacked.emit()
 => END

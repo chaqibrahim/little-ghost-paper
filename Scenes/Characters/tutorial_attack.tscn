@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c28ymc1udkyht"]
+
+[ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="1_274jt"]
+[ext_resource type="Script" uid="uid://dw6tl6fkydams" path="res://Scripts/Characters/tutorial_attack.gd" id="1_dfuqc"]
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_rw6hv"]
+[ext_resource type="Texture2D" uid="uid://cf4kftxjvjobd" path="res://Images/Characters/hat.aseprite" id="2_bdjlk"]
+[ext_resource type="PackedScene" uid="uid://byabiqeqi4y0e" path="res://Scenes/Components/hurt_box.tscn" id="3_bdjlk"]
+[ext_resource type="PackedScene" uid="uid://b60kgbsov7joo" path="res://Scenes/Components/sprite_normalizer.tscn" id="6_38prd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(8, 8)
+
+[node name="TutorialAttack" type="Node2D" unique_id=2065869899]
+scale = Vector2(2, 2)
+script = ExtResource("1_dfuqc")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=373594155]
+texture = ExtResource("1_rw6hv")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=2135116556]
+modulate = Color(1, 0, 0, 0.5)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_274jt")
+
+[node name="Hat" type="Sprite2D" parent="." unique_id=965537429]
+position = Vector2(0, -8)
+texture = ExtResource("2_bdjlk")
+
+[node name="HurtBox" parent="." unique_id=2055304093 instance=ExtResource("3_bdjlk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1109362398]
+shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="SpriteNormalizer" parent="." unique_id=1117604572 instance=ExtResource("6_38prd")]

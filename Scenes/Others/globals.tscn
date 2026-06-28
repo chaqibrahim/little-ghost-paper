@@ -18,9 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://clok7yg1rempe" path="res://Scenes/Stages/stage_4.tscn" id="8_r1r56"]
 [ext_resource type="PackedScene" uid="uid://hjyym4q42cuc" path="res://Scenes/Stages/battle_ring.tscn" id="9_tkm5g"]
 [ext_resource type="PackedScene" uid="uid://6282ycayunnc" path="res://Scenes/Components/position_keeper.tscn" id="10_3m3qa"]
+[ext_resource type="PackedScene" uid="uid://cdc6wmbm81hhi" path="res://Scenes/Menus/opponent_attack_timer.tscn" id="11_ljwni"]
 [ext_resource type="PackedScene" uid="uid://c7fnd4ewqpqv1" path="res://Scenes/Tiles/tile_wall.tscn" id="12_0lkdq"]
 [ext_resource type="Script" uid="uid://dwi73504k3b7u" path="res://Scripts/Globals/spawn.gd" id="13_iow56"]
 [ext_resource type="Script" uid="uid://bndd52q5alyxk" path="res://Scripts/Globals/signal.gd" id="14_47xnx"]
+[ext_resource type="PackedScene" uid="uid://c28ymc1udkyht" path="res://Scenes/Characters/tutorial_attack.tscn" id="14_gork6"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
@@ -35,9 +37,11 @@ stage2_scene = ExtResource("6_4e6sh")
 stage3_scene = ExtResource("7_p0ns3")
 stage4_scene = ExtResource("8_r1r56")
 battle_map = ExtResource("9_tkm5g")
+opponent_attack = ExtResource("11_ljwni")
 player_scene = ExtResource("6_x0rfn")
 tutorial_guy_scene = ExtResource("7_5kxlb")
 wall_scene = ExtResource("12_0lkdq")
+tutorial_attack = ExtResource("14_gork6")
 warp_effect = ExtResource("8_5kxlb")
 position_keeper = ExtResource("10_3m3qa")
 

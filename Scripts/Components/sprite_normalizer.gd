@@ -6,7 +6,7 @@ const ROTATION_SPEED := 1800.0
 var sprite: Sprite2D
 var last_position: Vector2
 
-@onready var parent: RigidBody2D = get_parent()
+@onready var parent: Node2D = get_parent()
 
 
 func _ready() -> void:
@@ -31,6 +31,8 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if not parent is RigidBody2D:
+		return
 	if parent.global_rotation == 0.0:
 		return
 
