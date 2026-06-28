@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cdc6wmbm81hhi"]
+
+[ext_resource type="Script" uid="uid://b3r4acl5clsyi" path="res://Scripts/Menus/opponent_attack_timer.gd" id="1_lhuwm"]
+[ext_resource type="Theme" uid="uid://ftoqm0fjiydn" path="res://Resources/Themes/theme_battle.tres" id="1_xisd6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ts7x6"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="OpponentAttackTimer" type="Control" unique_id=20116189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhuwm")
+
+[node name="AttackTimerRight" type="ProgressBar" parent="." unique_id=1222440023]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 150.0
+offset_right = 240.0
+offset_bottom = 160.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_xisd6")
+theme_override_styles/background = SubResource("StyleBoxFlat_ts7x6")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="AttackTimerLeft" type="ProgressBar" parent="." unique_id=308098589]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 150.0
+offset_right = 160.0
+offset_bottom = 160.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme = ExtResource("1_xisd6")
+theme_override_styles/background = SubResource("StyleBoxFlat_ts7x6")
+step = 1.0
+value = 50.0
+fill_mode = 1
+show_percentage = false
+
+[node name="Corner1" type="Marker2D" parent="." unique_id=817160457]
+position = Vector2(104, 40)
+
+[node name="Corner2" type="Marker2D" parent="." unique_id=1995861583]
+position = Vector2(216, 40)
+
+[node name="Corner3" type="Marker2D" parent="." unique_id=1695916183]
+position = Vector2(104, 136)
+
+[node name="Corner4" type="Marker2D" parent="." unique_id=1631420766]
+position = Vector2(216, 136)
