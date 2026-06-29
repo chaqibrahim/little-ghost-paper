@@ -49,7 +49,7 @@ You: What should I do ?
 	=> player_attempt
 
 ~ opponent_turn
-Player : Your turn!
+You: Your turn!
 if Globals.game.opponent_health <= 1:
 	=> player_win
 if Globals.game.need_defend_tutorial:
@@ -73,3 +73,12 @@ Tutorial Guy: Let's continue our journey then, shall we ?
 	$> Globals.signalbus.dialogue2_finished.emit()
 	$> Globals.signalbus.battle_ended.emit()
 	=> END
+
+~ boss_witness
+Random Guy: What ?
+You: !!!
+Random Guy: I saw that!
+You: !!!
+Random Guy: Murderer! Help!
+You: No witness
+$> Globals.signalbus.dialogue3_finished.emit()

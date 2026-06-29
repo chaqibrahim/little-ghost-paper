@@ -10,6 +10,8 @@ func _ready() -> void:
 		Globals.signalbus.player_talked.connect(animate_dialogue)
 	elif parent.is_in_group("tutorial_guy"):
 		Globals.signalbus.tutorial_guy_talked.connect(animate_dialogue)
+	elif parent.is_in_group("boss"):
+		Globals.signalbus.boss_talked.connect(animate_dialogue)
 
 
 func animate_dialogue() -> void:

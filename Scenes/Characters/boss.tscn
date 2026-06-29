@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d2s8o3dbgffiq"]
+
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_jljf3"]
+[ext_resource type="Texture2D" uid="uid://b7trj28t1t6ht" path="res://Images/Characters/boss_head.aseprite" id="2_jljf3"]
+[ext_resource type="PackedScene" uid="uid://dpx233vm6463t" path="res://Scenes/Components/dialogue_animator.tscn" id="3_grxx5"]
+[ext_resource type="PackedScene" uid="uid://b60kgbsov7joo" path="res://Scenes/Components/sprite_normalizer.tscn" id="4_nc3lf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(16, 16)
+
+[node name="Boss" type="RigidBody2D" unique_id=829174031 groups=["boss"]]
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1952097139]
+scale = Vector2(2, 2)
+texture = ExtResource("1_jljf3")
+
+[node name="Hat" type="Sprite2D" parent="." unique_id=815938881]
+position = Vector2(0, -16)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jljf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978996315]
+shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="DialogueAnimator" parent="." unique_id=1595439108 instance=ExtResource("3_grxx5")]
+
+[node name="SpriteNormalizer" parent="." unique_id=1117604572 instance=ExtResource("4_nc3lf")]

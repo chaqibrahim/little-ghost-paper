@@ -5,8 +5,10 @@ extends Node2D
 signal dialogue1_finished
 signal dialogue2_finished
 signal dialogue3_finished
+signal dialogue4_finished
 signal player_talked
 signal tutorial_guy_talked
+signal boss_talked
 signal interaction_shown
 signal interaction_hidden
 signal player_attacked

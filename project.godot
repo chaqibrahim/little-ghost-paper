@@ -46,6 +46,7 @@ player=""
 tutorial_guy=""
 position_keeper=""
 opponent=""
+boss=""
 
 [input]
 

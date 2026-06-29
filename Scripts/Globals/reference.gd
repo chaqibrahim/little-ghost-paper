@@ -16,6 +16,7 @@ extends Node2D
 @export_group("Character Scenes")
 @export var player_scene: PackedScene
 @export var tutorial_guy_scene: PackedScene
+@export var boss_scene: PackedScene
 @export var wall_scene: PackedScene
 @export var tutorial_attack: PackedScene
 @export var tutorial_dead: PackedScene
