@@ -50,6 +50,8 @@ You: What should I do ?
 
 ~ opponent_turn
 Player : Your turn!
+if Globals.game.opponent_health <= 1:
+	=> player_win
 if Globals.game.need_defend_tutorial:
 	Tutorial Guy: Now you should dodge with WASD
 	Tutorial Guy: Anything RED on screen means danger
@@ -57,3 +59,17 @@ if Globals.game.need_defend_tutorial:
 	$> Globals.game.need_defend_tutorial = false
 $> Globals.signalbus.enemy_attacked.emit()
 => END
+
+~ player_win
+Tutorial Guy: I'm at 1 hp, so you won!
+Tutorial Guy: Well done!
+You: Too EZ
+Tutorial Guy: Let's continue our journey then, shall we ?
+- Keep Attacking
+	$> Globals.signalbus.dialogue1_finished.emit()
+	$> Globals.signalbus.battle_ended.emit()
+	=> END
+- End The Battle
+	$> Globals.signalbus.dialogue2_finished.emit()
+	$> Globals.signalbus.battle_ended.emit()
+	=> END

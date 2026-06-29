@@ -24,6 +24,7 @@ func _ready() -> void:
 	Globals.signalbus.enemy_attacked.connect(start_dodging)
 	Globals.signalbus.enemy_succeed.connect(enemy_succeed)
 	Globals.signalbus.enemy_failed.connect(enemy_failed)
+	Globals.signalbus.battle_ended.connect(queue_free)
 
 	player = get_tree().get_first_node_in_group("player")
 	opponent = get_tree().get_first_node_in_group("opponent")

@@ -15,3 +15,4 @@ signal player_failed
 signal enemy_attacked
 signal enemy_succeed
 signal enemy_failed
+signal battle_ended

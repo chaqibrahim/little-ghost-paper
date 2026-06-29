@@ -18,6 +18,7 @@ extends Node2D
 @export var tutorial_guy_scene: PackedScene
 @export var wall_scene: PackedScene
 @export var tutorial_attack: PackedScene
+@export var tutorial_dead: PackedScene
 @export_group("Effect Scenes")
 @export var warp_effect: PackedScene
 @export_group("Others")

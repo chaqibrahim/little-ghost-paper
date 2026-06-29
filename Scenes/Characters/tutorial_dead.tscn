@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bx1giosemvioj"]
+
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_usj0l"]
+[ext_resource type="Texture2D" uid="uid://cf4kftxjvjobd" path="res://Images/Characters/hat.aseprite" id="2_gjp1c"]
+
+[node name="TutorialDead" type="Sprite2D" unique_id=1113846066]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("1_usj0l")
+flip_h = true
+
+[node name="Hat" type="Sprite2D" parent="." unique_id=1690642760]
+position = Vector2(-3.496911e-07, -8)
+texture = ExtResource("2_gjp1c")

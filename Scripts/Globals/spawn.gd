@@ -6,6 +6,7 @@ enum SpawnList {
 	PLAYER,
 	TUTORIAL_GUY,
 	WALL,
+	TUTORIAL_DEAD,
 }
 
 var spawn_list := { }
@@ -22,6 +23,7 @@ func setup_dictionaries() -> void:
 		SpawnList.PLAYER: Globals.reference.player_scene,
 		SpawnList.TUTORIAL_GUY: Globals.reference.tutorial_guy_scene,
 		SpawnList.WALL: Globals.reference.wall_scene,
+		SpawnList.TUTORIAL_DEAD: Globals.reference.tutorial_dead,
 	}
 
 
