@@ -11,6 +11,7 @@ extends Node2D
 @export var stage2_scene: PackedScene
 @export var stage3_scene: PackedScene
 @export var stage4_scene: PackedScene
+@export var stage5_scene: PackedScene
 @export var battle_map: PackedScene
 @export var opponent_attack: PackedScene
 @export_group("Character Scenes")

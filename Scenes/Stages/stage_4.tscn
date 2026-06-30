@@ -31,5 +31,8 @@ position = Vector2(160, -16)
 [node name="BossWalk" type="Marker2D" parent="." unique_id=1773882856]
 position = Vector2(160, 32)
 
+[node name="TutorialWalk" type="Marker2D" parent="." unique_id=842429797]
+position = Vector2(160, 64)
+
 [node name="TutorialGuy" parent="." unique_id=829174031 groups=["opponent"] instance=ExtResource("3_k6uff")]
 position = Vector2(216, 88)

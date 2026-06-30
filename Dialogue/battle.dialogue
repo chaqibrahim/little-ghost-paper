@@ -49,7 +49,7 @@ You: What should I do ?
 	=> player_attempt
 
 ~ opponent_turn
-You: Your turn!
+Tutorial Guy: My Turn!
 if Globals.game.opponent_health <= 1:
 	=> player_win
 if Globals.game.need_defend_tutorial:
@@ -65,20 +65,50 @@ Tutorial Guy: I'm at 1 hp, so you won!
 Tutorial Guy: Well done!
 You: Too EZ
 Tutorial Guy: Let's continue our journey then, shall we ?
+- End The Battle
+	$> Globals.signalbus.battle_ended.emit()
+	=> battle_end
+	=> END
 - Keep Attacking
 	$> Globals.signalbus.dialogue1_finished.emit()
 	$> Globals.signalbus.battle_ended.emit()
 	=> END
-- End The Battle
-	$> Globals.signalbus.dialogue2_finished.emit()
-	$> Globals.signalbus.battle_ended.emit()
-	=> END
+
 
 ~ boss_witness
-Random Guy: What ?
-You: !!!
+Random Guy: What the-?
+You: !
 Random Guy: I saw that!
 You: !!!
 Random Guy: Murderer! Help!
 You: No witness
+$> Globals.signalbus.dialogue3_finished.emit()
+=> END
+
+~ battle_end
+Tutorial Guy: Now, the tutorial basically finished
+Tutorial Guy: To make you better at your battles, lets find a better opponent!
+Tutorial Guy: Speaking of which, look at that person!
+$> Globals.signalbus.dialogue2_finished.emit()
+=> END
+
+~ provoke
+Tutorial Guy: Hey, you!
+Random Guy: M-Me ?
+Tutorial Guy: Let's have a battle!
+Random Guy: Sorry, I have to go
+Tutorial Guy: Come on! Just a lil bit!
+Random Guy: I don't want to join whatever you guys are doing
+Tutorial Guy: It won't take long!
+Random Guy: Get off of me!
+$> Globals.signalbus.dialogue4_finished.emit()
+=> END
+
+~ vengeance
+Tutorial Guy: I was at 1 hp
+Tutorial Guy: Any light tap would have killed me
+Random Guy: I.. I didn't mean to!
+Random Guy: You forced me to do it!
+Tutorial Guy: Vengeance me... blehh X_X
+Random Guy: I didn't mean to! I swear! No!
 $> Globals.signalbus.dialogue3_finished.emit()

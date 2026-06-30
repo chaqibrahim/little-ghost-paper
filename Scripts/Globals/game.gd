@@ -7,6 +7,7 @@ enum StageList {
 	STAGE_2,
 	STAGE_3,
 	STAGE_4,
+	STAGE_5,
 }
 enum AttackList {
 	TUTORIAL,
@@ -37,6 +38,7 @@ func setup_dictionaries() -> void:
 		StageList.STAGE_2: Globals.reference.stage2_scene,
 		StageList.STAGE_3: Globals.reference.stage3_scene,
 		StageList.STAGE_4: Globals.reference.stage4_scene,
+		StageList.STAGE_5: Globals.reference.stage5_scene,
 	}
 	attack_list = {
 		AttackList.TUTORIAL: Globals.reference.tutorial_attack,
