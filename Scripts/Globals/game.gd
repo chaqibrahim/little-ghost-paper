@@ -16,6 +16,7 @@ enum AttackList {
 
 var need_attack_tutorial := true
 var need_defend_tutorial := true
+var murderer := false
 var stage_list := { }
 var attack_list := { }
 var controllable := false
@@ -24,6 +25,7 @@ var player_health := 100
 var player_max_health := 100
 var opponent_health := 100
 var opponent_max_health := 100
+var saved_health := 100
 
 
 func _ready() -> void:

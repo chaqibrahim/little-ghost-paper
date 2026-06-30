@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b3e08e3nvi8ya"]
+
+[ext_resource type="Texture2D" uid="uid://cb2r0ldsdt0ox" path="res://Images/Characters/projectile.aseprite" id="1_5prrv"]
+[ext_resource type="Script" uid="uid://nodwqosyjic0" path="res://Scripts/Characters/boss_projectile.gd" id="1_r245u"]
+[ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="2_5prrv"]
+[ext_resource type="PackedScene" uid="uid://byabiqeqi4y0e" path="res://Scenes/Components/hurt_box.tscn" id="3_5prrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r245u"]
+size = Vector2(4, 4)
+
+[node name="BossProjectile" type="Node2D" unique_id=1385093464]
+scale = Vector2(2, 2)
+script = ExtResource("1_r245u")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1808647852]
+texture = ExtResource("1_5prrv")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=181770091]
+modulate = Color(1, 0, 0, 0.25)
+scale = Vector2(0.75000006, 0.75)
+texture = ExtResource("2_5prrv")
+
+[node name="HurtBox" parent="." unique_id=2055304093 instance=ExtResource("3_5prrv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1610240192]
+shape = SubResource("RectangleShape2D_r245u")

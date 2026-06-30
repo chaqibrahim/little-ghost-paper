@@ -1,0 +1,6 @@
+~ start
+You : There is nowhere else to go
+Random guy : Oh no...
+Random guy: I guess we do have to battle after all
+$> Globals.game.initiate_battle(Globals.game.AttackList.BOSS)
+=> END

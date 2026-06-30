@@ -70,6 +70,7 @@ Tutorial Guy: Let's continue our journey then, shall we ?
 	=> battle_end
 	=> END
 - Keep Attacking
+	$> Globals.game.murderer = true
 	$> Globals.signalbus.dialogue1_finished.emit()
 	$> Globals.signalbus.battle_ended.emit()
 	=> END

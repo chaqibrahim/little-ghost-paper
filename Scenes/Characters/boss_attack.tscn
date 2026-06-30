@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c7we2ccr5cucl"]
+
+[ext_resource type="Script" uid="uid://pgv5lm0qmove" path="res://Scripts/Characters/boss_attack.gd" id="1_qdewk"]
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="2_4xkts"]
+[ext_resource type="Texture2D" uid="uid://b74hx6nh4jj6o" path="res://Resources/Shapes/shape_white_square.tres" id="3_hoba3"]
+[ext_resource type="Texture2D" uid="uid://b7trj28t1t6ht" path="res://Images/Characters/boss_head.aseprite" id="4_ahxqc"]
+[ext_resource type="PackedScene" uid="uid://byabiqeqi4y0e" path="res://Scenes/Components/hurt_box.tscn" id="5_nc3u3"]
+[ext_resource type="PackedScene" uid="uid://b60kgbsov7joo" path="res://Scenes/Components/sprite_normalizer.tscn" id="6_xji6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73g4x"]
+size = Vector2(8, 8)
+
+[node name="BossAttack" type="Node2D" unique_id=1077190902]
+scale = Vector2(2, 2)
+script = ExtResource("1_qdewk")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=962638200]
+texture = ExtResource("2_4xkts")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=508786870]
+modulate = Color(1, 0, 0, 0.25)
+scale = Vector2(1.2499999, 1.25)
+texture = ExtResource("3_hoba3")
+
+[node name="Hat" type="Sprite2D" parent="." unique_id=1555041118]
+position = Vector2(0, -8)
+texture = ExtResource("4_ahxqc")
+
+[node name="HurtBox" parent="." unique_id=2055304093 instance=ExtResource("5_nc3u3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=816068960]
+shape = SubResource("RectangleShape2D_73g4x")
+
+[node name="SpriteNormalizer" parent="." unique_id=1117604572 instance=ExtResource("6_xji6u")]
