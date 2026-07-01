@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dtc22vdmshj85"]
+
+[ext_resource type="Script" uid="uid://cxycjtvei2q46" path="res://Scripts/Menus/main_menu.gd" id="1_ayom2"]
+[ext_resource type="Theme" uid="uid://cpo1vbwac5moe" path="res://Resources/Themes/theme_menu.tres" id="2_yau5q"]
+
+[node name="Ending" type="Control" unique_id=1834233669]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ayom2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1436816555]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -58.0
+offset_right = 30.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=1566545502]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme = ExtResource("2_yau5q")
+text = "Menu"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=2016761309]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme = ExtResource("2_yau5q")
+text = "Quit"
