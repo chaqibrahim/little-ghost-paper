@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://c28ymc1udkyht" path="res://Scenes/Characters/tutorial_attack.tscn" id="14_gork6"]
 [ext_resource type="PackedScene" uid="uid://d2s8o3dbgffiq" path="res://Scenes/Characters/boss.tscn" id="14_ri1xo"]
 [ext_resource type="PackedScene" uid="uid://bx1giosemvioj" path="res://Scenes/Characters/tutorial_dead.tscn" id="16_6n3pw"]
+[ext_resource type="PackedScene" uid="uid://c7we2ccr5cucl" path="res://Scenes/Characters/boss_attack.tscn" id="19_nxy7u"]
+[ext_resource type="PackedScene" uid="uid://b3e08e3nvi8ya" path="res://Scenes/Characters/boss_projectile.tscn" id="20_5nfrn"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
@@ -48,6 +50,8 @@ boss_scene = ExtResource("14_ri1xo")
 wall_scene = ExtResource("12_0lkdq")
 tutorial_attack = ExtResource("14_gork6")
 tutorial_dead = ExtResource("16_6n3pw")
+boss_attack = ExtResource("19_nxy7u")
+boss_projectile = ExtResource("20_5nfrn")
 warp_effect = ExtResource("8_5kxlb")
 position_keeper = ExtResource("10_3m3qa")
 

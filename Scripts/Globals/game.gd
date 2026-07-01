@@ -44,6 +44,7 @@ func setup_dictionaries() -> void:
 	}
 	attack_list = {
 		AttackList.TUTORIAL: Globals.reference.tutorial_attack,
+		AttackList.BOSS: Globals.reference.boss_attack,
 	}
 
 
