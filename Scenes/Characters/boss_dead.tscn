@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ctt5arwc3jj2e"]
+
+[ext_resource type="Texture2D" uid="uid://d1dhrrtb25ui8" path="res://Images/Characters/basebody.aseprite" id="1_uohj6"]
+[ext_resource type="Texture2D" uid="uid://b7trj28t1t6ht" path="res://Images/Characters/boss_head.aseprite" id="2_4ybdi"]
+
+[node name="BossDead" type="Sprite2D" unique_id=1113846066]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("1_uohj6")
+flip_h = true
+
+[node name="Hat" type="Sprite2D" parent="." unique_id=1690642760]
+position = Vector2(-3.496911e-07, -8)
+texture = ExtResource("2_4ybdi")

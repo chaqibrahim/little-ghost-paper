@@ -1,7 +1,7 @@
 #boss_attack.gd
 extends Node2D
 
-const ATTACK_INTERVAL := 2.0
+const ATTACK_INTERVAL := 1.0
 
 var attack_time := ATTACK_INTERVAL
 var player: RigidBody2D
@@ -29,5 +29,5 @@ func attack() -> void:
 	var projectile: Node2D = Globals.reference.boss_projectile.instantiate()
 	projectile.global_position = global_position
 	projectile.look_at(target)
-	projectile.global_rotation -= deg_to_rad(90)
-	Globals.layer.character_layer.add_child(projectile)
+	projectile.global_rotation += deg_to_rad(90)
+	parent.add_child(projectile)

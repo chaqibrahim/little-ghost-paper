@@ -1,6 +1,8 @@
 #stage_5.gd
 extends Node2D
 
+@export var dialogue: DialogueResource
+
 var player: Node2D
 var boss: Node2D
 
@@ -12,6 +14,9 @@ var boss: Node2D
 
 
 func _ready() -> void:
+	Globals.signalbus.dialogue1_finished.connect(boss_dead)
+
+	#boss muncul terus jalan ke posisi
 	Globals.spawn.spawn_character(Spawn.SpawnList.BOSS, spawn_pos.global_position, 0.0)
 	await get_tree().create_timer(0.5).timeout
 	boss = get_tree().get_first_node_in_group("boss")
@@ -19,6 +24,8 @@ func _ready() -> void:
 	tween.tween_property(boss, "global_position", boss_pre_pos.global_position, 1.0)
 	tween.tween_property(boss, "global_position", boss_pos.global_position, 0.25)
 	await tween.finished
+
+	#player muncul terus jalan ke posisi
 	Globals.spawn.spawn_character(Spawn.SpawnList.PLAYER, spawn_pos.global_position, 0.0)
 	await get_tree().create_timer(0.5).timeout
 	player = get_tree().get_first_node_in_group("player")
@@ -26,3 +33,15 @@ func _ready() -> void:
 	tween.tween_property(player, "global_position", player_pre_pos.global_position, 1.0)
 	tween.tween_property(player, "global_position", player_pos.global_position, 0.25)
 	await tween.finished
+
+	#mulai dialog
+	DialogueManager.show_dialogue_balloon(dialogue, "start")
+
+
+func boss_dead() -> void:
+	boss.queue_free()
+	Globals.spawn.spawn_character(
+		Spawn.SpawnList.BOSS_DEAD,
+		boss_pos.global_position,
+		deg_to_rad(90.0),
+	)

@@ -6,6 +6,7 @@ extends Node2D
 @export var disclaimer_scene: PackedScene
 @export var mainmenu_scene: PackedScene
 @export var qte_scene: PackedScene
+@export var gameover_scene: PackedScene
 @export_group("Stage Scenes")
 @export var stage1_scene: PackedScene
 @export var stage2_scene: PackedScene
@@ -23,6 +24,7 @@ extends Node2D
 @export var tutorial_dead: PackedScene
 @export var boss_attack: PackedScene
 @export var boss_projectile: PackedScene
+@export var boss_dead: PackedScene
 @export_group("Effect Scenes")
 @export var warp_effect: PackedScene
 @export_group("Others")

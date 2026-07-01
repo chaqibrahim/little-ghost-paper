@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://e0dloi4ai5vf" path="res://Scenes/Menus/qte_bar.tscn" id="5_pbefe"]
 [ext_resource type="PackedScene" uid="uid://d16hptpsn1bbt" path="res://Scenes/Stages/stage_1.tscn" id="5_vmcjh"]
 [ext_resource type="PackedScene" uid="uid://d3qu3epagxcmu" path="res://Scenes/Stages/stage_2.tscn" id="6_4e6sh"]
+[ext_resource type="PackedScene" uid="uid://cxmo86exvnyrh" path="res://Scenes/Menus/game_over.tscn" id="6_5nfrn"]
 [ext_resource type="Script" uid="uid://cucp3j5b18lni" path="res://Scripts/Globals/menu.gd" id="6_f6rvj"]
 [ext_resource type="PackedScene" uid="uid://1qnvbw4femld" path="res://Scenes/Characters/player.tscn" id="6_x0rfn"]
 [ext_resource type="Script" uid="uid://dow3aoxwp87om" path="res://Scripts/Globals/effect.gd" id="7_0s48f"]
@@ -28,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bx1giosemvioj" path="res://Scenes/Characters/tutorial_dead.tscn" id="16_6n3pw"]
 [ext_resource type="PackedScene" uid="uid://c7we2ccr5cucl" path="res://Scenes/Characters/boss_attack.tscn" id="19_nxy7u"]
 [ext_resource type="PackedScene" uid="uid://b3e08e3nvi8ya" path="res://Scenes/Characters/boss_projectile.tscn" id="20_5nfrn"]
+[ext_resource type="PackedScene" uid="uid://ctt5arwc3jj2e" path="res://Scenes/Characters/boss_dead.tscn" id="22_5b0dd"]
 
 [node name="Globals" type="Node2D" unique_id=775614890]
 script = ExtResource("1_nnkp2")
@@ -37,6 +39,7 @@ script = ExtResource("4_0e3jl")
 disclaimer_scene = ExtResource("2_jyc0d")
 mainmenu_scene = ExtResource("3_0e3jl")
 qte_scene = ExtResource("5_pbefe")
+gameover_scene = ExtResource("6_5nfrn")
 stage1_scene = ExtResource("5_vmcjh")
 stage2_scene = ExtResource("6_4e6sh")
 stage3_scene = ExtResource("7_p0ns3")
@@ -52,6 +55,7 @@ tutorial_attack = ExtResource("14_gork6")
 tutorial_dead = ExtResource("16_6n3pw")
 boss_attack = ExtResource("19_nxy7u")
 boss_projectile = ExtResource("20_5nfrn")
+boss_dead = ExtResource("22_5b0dd")
 warp_effect = ExtResource("8_5kxlb")
 position_keeper = ExtResource("10_3m3qa")
 

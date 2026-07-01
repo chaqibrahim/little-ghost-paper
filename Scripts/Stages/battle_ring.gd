@@ -4,8 +4,7 @@ extends Control
 const PLAYER_DAMAGE := 33
 const ENEMY_DAMAGE := 20
 
-@export var dialogue: DialogueResource
-
+var dialogue: DialogueResource
 var player: Node2D
 var opponent: Node2D
 var opponent_attack: Game.AttackList
@@ -28,6 +27,12 @@ func _ready() -> void:
 
 	player = get_tree().get_first_node_in_group("player")
 	opponent = get_tree().get_first_node_in_group("opponent")
+
+	match opponent_attack:
+		Game.AttackList.TUTORIAL:
+			dialogue = load("res://Dialogue/battle.dialogue")
+		Game.AttackList.BOSS:
+			dialogue = load("res://Dialogue/boss.dialogue")
 
 
 func start_qte() -> void:

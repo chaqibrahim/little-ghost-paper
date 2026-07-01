@@ -5,6 +5,7 @@ extends Node2D
 enum MenuList {
 	DISCLAIMER,
 	MAIN_MENU,
+	GAME_OVER,
 }
 
 var menu_list := { }
@@ -23,6 +24,7 @@ func setup_dictionaries() -> void:
 	menu_list = {
 		MenuList.DISCLAIMER: Globals.reference.disclaimer_scene,
 		MenuList.MAIN_MENU: Globals.reference.mainmenu_scene,
+		MenuList.GAME_OVER: Globals.reference.gameover_scene,
 	}
 
 

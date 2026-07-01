@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
 size = Vector2(16, 16)
 
-[node name="Boss" type="RigidBody2D" unique_id=829174031 groups=["boss"]]
+[node name="Boss" type="RigidBody2D" unique_id=829174031 groups=["boss", "opponent"]]
 
 [node name="Body" type="Sprite2D" parent="." unique_id=1952097139]
 scale = Vector2(2, 2)

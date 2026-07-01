@@ -8,6 +8,7 @@ enum SpawnList {
 	BOSS,
 	WALL,
 	TUTORIAL_DEAD,
+	BOSS_DEAD,
 }
 
 var spawn_list := { }
@@ -26,6 +27,7 @@ func setup_dictionaries() -> void:
 		SpawnList.BOSS: Globals.reference.boss_scene,
 		SpawnList.WALL: Globals.reference.wall_scene,
 		SpawnList.TUTORIAL_DEAD: Globals.reference.tutorial_dead,
+		SpawnList.BOSS_DEAD: Globals.reference.boss_dead,
 	}
 
 

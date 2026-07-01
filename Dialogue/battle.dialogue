@@ -26,6 +26,8 @@ Tutorial Guy: Let's start with your turn!
 
 
 ~ my_turn
+if Globals.game.player_health <= 0:
+	=> player_restore
 You: My turn!
 => player_attempt
 => END
@@ -60,11 +62,18 @@ if Globals.game.need_defend_tutorial:
 $> Globals.signalbus.enemy_attacked.emit()
 => END
 
+~ player_restore
+Tutorial Guy: Your health is 0, you're technically dead
+Tutorial Guy: But since its still tutorial, lets just restore your health
+$> Globals.game.player_health = 100
+=> player_attempt
+
 ~ player_win
 Tutorial Guy: I'm at 1 hp, so you won!
 Tutorial Guy: Well done!
 You: Too EZ
 Tutorial Guy: Let's continue our journey then, shall we ?
+$> Globals.game.saved_health = Globals.game.player_health
 - End The Battle
 	$> Globals.signalbus.battle_ended.emit()
 	=> battle_end

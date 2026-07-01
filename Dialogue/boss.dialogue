@@ -1,6 +1,48 @@
 ~ start
 You : There is nowhere else to go
 Random guy : Oh no...
-Random guy: I guess we do have to battle after all
+Random guy: I guess we do have to battle after all...
+$> Globals.game.opponent_max_health = 165
+$> Globals.game.opponent_health = 165
+$> Globals.game.player_health = Globals.game.saved_health
 $> Globals.game.initiate_battle(Globals.game.AttackList.BOSS)
+=> my_turn
 => END
+
+~ my_turn
+You: My turn!
+=> player_attempt
+
+~ player_attempt
+if Globals.game.player_health <= 0:
+	$> Globals.menu.show_menu(Menu.MenuList.GAME_OVER)
+	=> END
+You: What should I do ?
+- Attack
+	$> Globals.signalbus.player_attacked.emit()
+	=> END
+- Item
+	You: I don't really have anything at the moment
+	=> player_attempt
+- Run
+	You: I'm surrounded by these borders!
+	=> player_attempt
+
+~ opponent_turn
+if Globals.game.opponent_health <= 0:
+	$> Globals.signalbus.dialogue1_finished.emit()
+	if Globals.game.murderer:
+		=> muderer_ending
+	else:
+		=> vengeance_ending
+Random guy: My Turn!
+$> Globals.signalbus.enemy_attacked.emit()
+=> END
+
+~ muderer_ending
+Random guy: You... really are... a murderer...
+You: Mwuahahaha
+
+~ vengeance_ending
+Random guy: I... really didn't mean to kill...
+You: Justice is served
